@@ -1,0 +1,14 @@
+//_donate.scss
+
+
+@include media(tablet) {
+	.tabs-container--give ul li { width: auto; }
+
+	body.is_tablet .tabs-container--give ul li { 
+		// width: 160px;
+		// height: 160px; 
+
+		float: left;
+
+	}
+}

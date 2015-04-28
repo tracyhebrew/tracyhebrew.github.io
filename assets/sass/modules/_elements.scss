@@ -1,0 +1,937 @@
+// _elements.scss
+
+/**
+ * Spacer
+ */
+.spacer {
+  width:100%;
+  height:auto;
+  margin: 40px auto;
+}
+
+/**
+ * Text Image
+ * Images with text too complicated for normal rendering. Keep in this wrapper
+ */
+.text-image {
+  position:relative;
+  @include inline-block;
+}
+
+/**
+ * Circles
+ * 
+ */
+
+.circle {
+	position:relative;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	border: 4px solid $colorGrayLight;
+	background-clip: padding-box;
+	@include border-radius(50%);
+	@extend %bg-cover;
+
+	&.circle--med {
+		@include inline-block;
+		width: 185px;
+		height: 185px;
+		border: 4px solid $colorGrayLight;
+		cursor:pointer;
+		color: $colorPrimary;
+		@include transition(all 100ms linear);
+		@include transform(scale3d(1, 1, 1));
+
+		.icon {
+			position: absolute;
+			left: 50%;
+			top: 40px;
+			margin-left: -27.5px;
+		}
+
+		h6 {
+			margin-top: 95px;
+			text-align: center;
+
+			&.single-line { margin-top: 110px; }
+		}
+
+		&.hover-effect {
+			border: none;
+			position: relative;
+
+			&:before {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 0;
+				border: 4px solid $colorGrayLight;
+				@include border-radius(50%);
+				@include transition(all 100ms linear);
+			}
+
+			&:hover:before {
+				width: 200px;
+				height: 200px;
+				top: -5px;
+				left: -5px;
+				border: 4px solid $colorPrimary;
+			}
+		}
+	}
+
+	&.circle--xlrg {
+		width: 350px;
+		height: 350px;
+		border: 7px solid #ebebeb;
+	}
+
+	&.circle--small {
+		width: 56px;
+		height: 56px;
+		border: 2px solid #fff;
+		line-height: 65px;
+		text-align: center; 
+
+		.fa { font-size: 30px; color: #fff; }
+	}
+
+	// SMALL DESC CIRCLE
+	&.circle--xlrg__desc {
+		width: 152px;
+		height: 152px;
+		padding: 15px;
+		background-color: $colorGrayLight;
+		border: none;
+		box-shadow: 5px -5px 6px rgba(0,0,0,.19);
+		@include border-radius(76px);
+
+		&.left {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			margin-bottom: -25px;
+		}
+
+		&.right {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			margin-bottom: -25px;
+		}
+
+		p {
+			font-size: 13px;
+			font-family: "opensans";
+			font-style: italic;
+			font-weight: bold;
+			margin: 0;
+			color: #9f9f9f;
+		}
+	}
+
+	&.circle--postimage, &.circle--large {
+		width: 260px;
+		height: 260px;
+		border: 7px solid #ebebeb;
+	}
+
+	&.circle-blue {
+		position: relative; 
+
+		&:before {
+			width: 100%;
+			height: 100%;
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			@include transparent-bg($colorPrimary,.5);
+			@include border-radius(50%);
+		}
+	}
+
+	&.center {
+		margin: 0 auto;
+	}
+
+	@include media(mobile) {
+		&.circle--med {
+			// width: 150px;
+			// height: 150px;
+		}
+
+		&.circle--xlrg {
+			width: 250px;
+			height: 250px;
+		}
+	}
+}
+
+li.current .circle--med.hover-effect:before { border-color: $colorPrimary; }
+
+body.is_tablet .circle--med {
+	width: 175px;
+	height: 175px;
+
+	&.hover-effect:hover:before {
+		width: 185px;
+		height: 185px;
+	}
+}
+
+@include media(tablet) {
+	.circle--med {
+		width: 175px;
+		height: 175px;
+
+		&.hover-effect:hover:before {
+			width: 185px;
+			height: 185px;
+		}
+	}
+}
+
+
+/**
+ * Horizontal rule
+ * 
+ */
+hr {
+	width: 100%;
+	float: none;
+	border-style: none;
+	margin: 0 auto;
+	clear: both;
+}
+hr.divide--large {
+	max-width: 1085px;
+	height: 6px;
+}
+hr.divide--small {
+	max-width: 340px;
+	height: 2px;
+}
+
+// Stop HR from being full-width
+@media screen and (max-width: 1095px) {
+	hr.divide--large { max-width: 95%; }
+	hr.divide--small { max-width: 35%; }
+}
+
+hr.divide--light { background: $colorGrayLight; }
+hr.divide--dark  { background: #d4d4d4; }
+
+/**
+ * Icons 
+ * 
+ */
+
+.icon {
+	width: 55px;
+	height: 50px;
+	display: block;
+
+	&.icon--investigate			{ background: url(../images/icons-sprite.png) 0 0; }
+	&.icon--advocacy 				{ background: url(../images/icons-sprite.png) -55px 0; }
+	&.icon--building 				{ background: url(../images/icons-sprite.png) -110px 0; }
+	&.icon--books 					{ background: url(../images/icons-sprite.png) -165px 0; }
+	&.icon--knife						{ background: url(../images/icons-sprite.png) -220px 0; }
+	&.icon--meat 						{ background: url(../images/icons-sprite.png) -275px 0; }
+	&.icon--chicken					{ background: url(../images/icons-sprite.png) -330px 0; }
+	&.icon--salad						{ background: url(../images/icons-sprite.png) -385px 0; }
+	&.icon--cow							{ background: url(../images/icons-sprite.png) -440px 0; }
+	&.icon--check						{ background: url(../images/icons-sprite.png) -495px 0; }
+	&.icon--road-yellow			{ background: url(../images/icons-sprite.png) 0px -50px; width: 75px; height: 25px; }
+	&.icon--road-black			{ background: url(../images/icons-sprite.png) 0px -100px; width: 75px; height: 25px; }
+	&.icon--pig-yellow			{ background: url(../images/icons-sprite.png) -110px -50px; }
+	&.icon--pig-black				{ background: url(../images/icons-sprite.png) -110px -100px; }
+	&.icon--globe-yellow		{ background: url(../images/icons-sprite.png) -165px -50px; }
+	&.icon--globe-black			{ background: url(../images/icons-sprite.png) -165px -100px; }
+	&.icon--chicken-yellow	{ background: url(../images/icons-sprite.png) -220px -50px; }
+	&.icon--award						{ background: url(../images/icons-sprite.png) -275px -50px; }
+	&.icon--graph						{ background: url(../images/icons-sprite.png) -330px -50px; }
+	&.icon--charity					{ background: url(../images/icons-sprite.png) -385px -50px; }
+	&.icon--moneybag				{ background: url(../images/icons-sprite.png) -440px -50px; }
+	&.icon--shark-black			{ background: url(../images/icons-sprite.png) -8px -130px; height: 20px; }
+}
+
+.icon-check {
+	width: 40px;
+	height: 45px;
+	display: block;
+	background-image: url(../images/icon-check.png);
+
+	&.inline { display: inline-block; }
+	&.baseline { margin-bottom: -10px; }
+}
+
+.icon-help {
+	width: 35px;
+	height: 40px;
+	display: block; 
+
+	&.icon--salad 	{ background: url(../images/icons-sprite.png) -550px 0; margin-left: 8px; margin-top: 6px; }
+	&.icon--user 	{ background: url(../images/icons-sprite.png) -585px 0; margin-left: 8px; margin-top: 6px; }
+}
+
+.icon--moneybag-small {
+	width: 35px;
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+	background: url(../images/icons-sprite.png) -75px -50px;
+}
+
+// Circles with icon backgrounds : ABOUT page
+.circle.icon-bg {
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 55px;
+		height: 50px;
+		left: 50%;
+		top: 50%;
+		margin-left: -27.5px;
+		margin-top: -25px;
+		z-index: 3;
+	}
+}
+.circle.icon--pig-black:before {
+	background: url(../images/icons-sprite.png) -110px -100px;
+}
+.circle.icon--globe-black:before {
+	background: url(../images/icons-sprite.png) -165px -100px;
+}
+.circle.icon--road-black:before {
+	width: 75px;
+	height: 25px;
+	margin-top: -22.5px;
+	margin-left: -37.5px;
+	background: url(../images/icons-sprite.png) 0px -100px;
+}
+.circle.icon--shark-black:before {
+	height: 20px;
+	margin-top: -10px;
+	background: url(../images/icons-sprite.png) -8px -130px;
+}
+
+/**
+ * Logo
+ * 
+ */
+.logo {
+	width: 150px;
+	height: 58px;
+	display: block;
+}
+.logo-white { background: url(../images/logo-sprite.png) -150px 0; }
+.logo-color { background: url(../images/logo-sprite.png) 0 0; }
+
+.logo-paypal {
+	width: 82px;
+	height: 24px;
+	background: url(../images/logo-paypal.png);
+}
+
+
+/**
+ * CTA/DONATE TABS
+ * 
+ */
+.tabs-container {
+	ul { 
+		list-style-type: none; 
+		padding-left: 0;
+	}
+}
+
+/* TAB SPECIFIC
+================================================= */
+
+.tabs-container--cta {
+	height: 845px;
+	position: relative;
+
+	.tab {
+		background-color: #fff;
+		float: left;
+		width: 100%;
+		height: 845px;
+	}
+
+	.tab__nav {
+		width: 40px;
+		height: 75px;
+		position: absolute;
+		top: 50%;
+		margin-top: -37.5px;
+		background: #fff;
+		background: rgba(255,255,255,.5);
+		line-height: 75px;
+		text-align: center;
+		font-size: 30px;
+		color: #fff;
+		@include transition(all 100ms linear);
+
+		&.tab__nav--prev {
+			left: 0;
+			@include border-radius(0 40px 40px 0);
+			
+			.fa { margin-left: -10px; }
+		}
+
+		&.tab__nav--next {
+			right: 0;
+			@include border-radius(40px 0 0 40px);
+
+			.fa { margin-left: 10px; }
+		}
+
+		&:hover {
+			background: rgba(255,255,255,.7);
+
+			.fa {
+				-webkit-font-smoothing: subpixel-antialiased;
+				-moz-transform: scaleX(1.2);
+				-ms-transform: scaleX(1.2);
+				-webkit-transform: scaleX(1.2);
+				transform: scaleX(1.2);
+			}
+		}
+	}
+
+	.tabs__menu {
+	 	padding-left: 0;
+	 	height: 845px;
+
+	 	li {
+ 			float: left;
+ 			line-height: 30px;
+ 			list-style-type: none;
+ 			margin-top: 630px;
+
+ 			a {
+ 				padding: 10px;
+ 				text-transform: uppercase;
+ 				color: #fff;
+ 				text-decoration: none; 
+ 			}
+
+ 			&.current {
+ 				position: relative;
+ 				// z-index: 5;
+
+ 				a.cta__block:before { background: transparent; }
+ 			}	
+ 		}
+	}
+
+	.tab__content {
+		width: 100%;
+		height: 630px;
+		display: none;
+		color: #fff;
+		// @extend %bg-cover;
+		-moz-background-size: cover !important;
+		-o-background-size: cover !important;
+		-webkit-background-size: cover !important;
+		background-size: cover !important;
+		background-repeat: no-repeat;
+		background-position: 50% 50% !important;
+
+		
+		position: absolute; 
+		top: 0;
+		left: 0;
+
+		h1 {
+			margin: 0;
+			padding: 110px 0 0;
+		}
+		h5 { 
+			margin-bottom: 30px; 
+		}
+	}
+	
+
+	#donate {
+		display: block;   
+	}
+	
+	a.tab__nav { color: #fff !important; }
+
+	@include media(mobile) {
+		height: auto;
+		margin-bottom: 5px; 
+		
+		.cta--blue {
+			margin: 0;
+		}
+
+		.tab {
+			height: auto;
+		}
+		
+		.tabs__menu {
+			width: 100%;
+			height: auto;
+		}
+
+		.tabs-container--cta {
+			height: auto;
+			margin-bottom: 5px;
+		}
+
+		.tab__nav { display: none; }
+
+		.tabs__menu li { 
+			margin-top: 0; 
+		}
+
+		.tab__content { 
+			width: 100%;
+			height: 450px;
+			position: relative;
+			float: left;
+			margin-bottom: 5px;
+
+			&#involved { margin-bottom: 0; }
+
+			h1 { padding-top: 40px; }
+		}
+	}
+}
+
+/* BLUE CTA SPECIFIC
+================================================= */
+.cta--blue {
+	
+	margin: 5px 0; 
+
+	> .span3 {
+		height: 205px;
+		background: #fff;
+	}
+
+	.cta__block {
+		width: 98.5%;
+		height: 100%;
+		display: block;
+		float: left;
+		position: relative;
+		text-align: center; 
+		cursor: pointer;
+		@extend %bg-cover;
+		@include transition(all 100ms linear);
+
+		&:before {
+			width: 100%;
+			height: 100%;
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 10;
+			@include transparent-bg($colorPrimary,0.65);
+			@include transition(all 100ms linear);
+			@include opacity(1);
+		}
+
+		.circle--small {
+			margin: 20px auto;
+			position: absolute;
+			z-index: 50;
+			left: 50%;
+			top: 35px;
+			margin-left: -23px;
+		}
+
+		h5 { 
+			color: #fff; 
+			margin: 0; 
+			font-weight: 300;
+			width: 100%;
+			position: absolute;
+			z-index: 50;
+			bottom: 50px;
+			text-transform: none;
+		}
+
+		&:hover:before {
+			@include opacity(0.2);
+		}
+	}
+
+	.span3:nth-of-type(1) .cta__block {
+		margin-right: 1%;
+	}
+	.span3:nth-of-type(2) .cta__block {
+		margin-left: .5%;
+		margin-right: 1.5%;
+	}
+	.span3:nth-of-type(3) .cta__block {
+		float: right;
+		margin-right: .5%;
+		margin-left: 1.5%;
+	}
+	.span3:nth-of-type(4) .cta__block {
+		float: right;
+		margin-left: 1%
+	}
+
+	@include media(mobile) {
+		margin: 0; 
+
+		> .span3 { margin-bottom: 5px; }
+
+		.span3.current { 
+			display: none;
+			margin-bottom: 0; 
+		}
+
+		.span3:nth-of-type(4) { margin-bottom: 0; }
+
+		.cta__block { width: 100%; }
+
+		.span3:nth-of-type(1) .cta__block,
+		.span3:nth-of-type(2) .cta__block,
+		.span3:nth-of-type(3) .cta__block,
+		.span3:nth-of-type(4) .cta__block {
+			float: left;
+			margin: 0;
+		}	
+	}
+}
+// Eat with Compassion CTA slide
+#meat-free .form--signup {
+	font-size: 18px;
+
+	@include media(mobile) {
+		font-size: 16px; 
+
+		h5 { margin-bottom: 10px; }
+	}
+}
+
+/* TABS CONTAINER: WAYS TO GIVE [DONATE]
+================================================= */
+.tabs-container--give {
+	.tab--give {
+		margin-top: 100px;
+
+		.container {
+			display: table;
+		}
+	}
+
+	// menu and with content inside
+	ul {
+		height: 630px;
+		position: relative;
+
+		// menu items
+		li {
+			display: inline-block;
+			float: none;
+			max-width: 235px;
+		}
+	}
+	.tab__content {
+		display: none;
+		width: 100%;
+		height: 370px;
+		padding: 50px 80px 70px;
+		position: absolute;
+		bottom: 0;
+
+		.btn { margin-top: 1rem; }
+	}
+
+	#bequests {
+		display: block;
+	}
+	
+	li { 
+		height: 250px;
+		position: relative;
+		@include transition(all 100ms linear); 
+	}
+	
+	h6 {
+		width: 100%;
+		position: absolute;
+	}
+
+	li.current {
+		.circle.circle--med {
+			border-color: $colorPrimary;
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			width: 0; 
+			height: 0; 
+			bottom: 0;
+			left: 50%;
+			margin-bottom: -10px;
+			margin-left: -15px;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-bottom: 15px solid $colorGrayLight;
+			z-index: 998;
+			@include transition(all 100ms linear);
+		}
+
+	}
+
+	@include media(mobile) {
+		ul {
+			height: auto;
+			
+			li {
+				max-width: 100%;
+				height: auto;
+				margin: 10px 0;
+
+				&.current { display: none; }
+			}
+		}
+
+		.tab__content {
+			height: auto;
+			position: relative;
+			bottom: auto;
+			padding: 30px 0;
+			margin: 20px 0;
+		}
+	}
+}
+
+/* ONLY DONATE SLIDE - FORM
+================================================= */
+.section--donate {
+	height: 630px;
+	display: table;
+	margin-bottom: 5px;
+
+	@extend %bg-cover;
+
+	#form--donation {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+/**
+ * L/R Panel
+ * 
+ */
+.panel {
+	height: 370px;
+
+	.container {
+		height: 370px;
+		display: table;
+	}
+
+	.panel__inner {
+		display: table-cell;
+		vertical-align: middle;
+		float: none;
+	}
+
+	.btn--social {
+		margin: 0 10px;
+	}
+
+	.panel__abs {
+		height: 370px;
+		position: absolute;
+		top: 0;
+	}
+
+	.panel__abs--left { left: 0; }
+	.panel__abs--right { right: 0; }
+
+	.panel__inner--left {
+		padding-right: 90px;
+	}
+	.panel__inner--right { padding-left: 90px; }
+
+	@include media(mobile) {
+		height: auto;
+
+		.container { 
+			height: auto; 
+			padding: 0;
+		}
+
+		.panel__inner {
+			float: left;
+		}
+
+		.panel__abs {
+			position: relative;
+			@include background-size(cover);
+		}
+
+		.panel__inner--left, .panel__inner--right {
+			padding: 40px 20px;
+		}
+
+		.btn--social { margin: 0 5px; }
+
+		.mobile-hide {
+			display: none; 
+		}
+
+		.mobile-bg-blue { background: $colorPrimary; }
+	}
+}
+
+// TABLET
+body.is_tablet {
+	.panel .panel__abs { @include background-size(cover); }
+}
+
+
+//  ACTION CENTER SPECIFIC
+.action-center {
+	.panel__inner--left {
+		position: relative; 
+
+		&:after {
+			width: 0; 
+			content: '';
+			position: absolute;
+			border-top: 24px solid transparent;
+			border-bottom: 24px solid transparent;
+			border-left: 24px solid $colorPrimary;
+			top: 50%;
+			right: 0;
+			margin-top: -24px;
+			margin-right: -24px;
+		}
+	}
+
+	@include media(mobile) {
+		.panel__inner--left:after {
+			border-left: 24px solid transparent;
+			border-right: 24px solid transparent;
+			border-top: 24px solid $colorPrimary;
+			bottom: 0;
+			top: auto;
+			right: auto;
+			margin-top: 0;
+			margin-right: 0;
+			left: 50%;
+			margin-left: -24px;
+			margin-bottom: -47px;
+		}
+		.panel__inner--right {
+			padding-top: 50px;
+		}
+	}
+
+
+}
+
+// GO MEAT FREE
+.meat-free {
+	height: 480px;
+
+	.container { height: 480px; }
+
+	.panel__abs--right {
+		top: 50px;
+		background-repeat: no-repeat;
+		background-position: 100%;
+		background-size: auto;
+	}
+
+	@include media(mobile) {
+		height: auto;
+
+		.container { height: auto; }
+	}
+}
+
+/**
+ * MENU SOCIAL
+ * 
+ */
+
+.menu--social {
+	padding-left: 0;
+	margin-bottom: 0;
+
+	li {
+		display: inline-block; 
+	}
+
+	&.align-center {
+		li a { margin: 0 8px; }
+	}
+
+	&.align-left {
+		li a { margin: 0 16px 0 0;}
+	}
+
+	&.align-right {
+		float: right;
+		li a { 
+
+			margin: 0 0 0 16px;
+
+			.fa {}
+		}
+	}
+}
+
+/**
+ * Video Embed Container
+ * 
+ */
+
+.video-embed {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-embed iframe,  
+.video-embed object,  
+.video-embed embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	// width: 100%;
+	// height: 100%;
+	width: 560px;
+	height: 315px;
+	left: 50%;
+	margin-left: -280px;
+	margin-top: 2rem;
+}
+
+@include media(mobile) {
+	.video-embed iframe,  
+	.video-embed object,  
+	.video-embed embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin-left: 0;
+	}
+}

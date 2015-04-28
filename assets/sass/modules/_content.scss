@@ -1,0 +1,210 @@
+// _content.scss
+
+html, body { overflow-x: hidden; }
+
+/**
+ * Wrapper
+ * Main wrapper element for hiding overflow etc
+ */
+#wrap {
+  overflow-x:hidden;
+  
+}
+
+/**
+ * Content
+ * Main content container, after header/hero and before footer
+ */
+#main {
+  
+  &.default { 
+    
+  }
+
+}
+
+
+/**
+ * Content
+ * Page content container, after header/hero and before footer
+ */
+#main {
+  
+  &.page { 
+    a {
+      color: $colorPrimary;
+
+      &:after {}
+
+      &:hover { 
+        color: darken($colorPrimary,8); 
+      }
+    }
+
+    a.btn { color: #fff; }
+
+    p {
+      span {
+        font-family: $default-alt;
+        color: $colorPrimary;
+        font-weight: 500;
+      }
+    }
+
+    form:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    form {
+      margin-bottom: 30px;
+    }
+
+    a.btn { margin-bottom: 5px; }
+  }
+
+  p a, %link-with-hover-effect {
+    color: $colorPrimary;
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      margin-bottom: -3px;
+      width: 100%;
+      height: 1px;
+      //background: darken($colorPrimary,8);
+      background: $colorPrimary;
+      opacity: 0;
+      -webkit-transform: translateY(5px);
+      -moz-transform: translateY(5px);
+      transform: translateY(5px);
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+      -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+      transition: transform 0.3s, opacity 0.3s;
+      pointer-events: none;
+    }
+
+    &:hover:after { 
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+
+    @include media(mobile) {
+      &:after {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px);
+      }
+    }
+  }
+
+  .strikethrough { text-decoration: line-through; }
+}
+
+a.link-gray, %link-gray {
+  color: #b4b4b4;
+
+  &:hover { color: darken(#b4b4b4, 8); }
+}
+
+blockquote {
+  font-family: $default;
+  font-size: em(24px);
+  font-weight: 300;
+  position: relative;
+  margin: 2rem 0;
+  padding: 0 30px;
+
+  &:before {
+    width: 5px;
+    height: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $colorSecondary;
+  }
+}
+
+/**
+ * Section
+ */
+section {
+  float: left;
+  width: 100%;
+  position: relative;
+  background: #fff;
+
+  &.border-bottom-yellow { border-bottom: 8px solid $colorSecondary; }
+}
+  .section { padding: 50px 0; }
+  .section--large { padding: 90px 0; }
+  .section--medium { padding: 60px 0; }
+  .section--small { padding: 40px 0; }
+  .section--xsmall { padding: 20px 0; }
+
+  .section__bordertop--small { border-top: 4px solid #fff; }
+  .section__mb--small { margin-bottom: 4px; }
+
+@include media(mobile) {
+  .section { padding: 25px 0; }
+  .section--large { padding: 50px 0; }
+  .section--medium { padding: 30px 0; }
+  .section--small { padding: 20px 0; }
+  .section--xsmall { padding: 10px 0; }
+}
+
+/**
+ * Article
+ * Article styling for pages/posts
+ */
+article {
+  @include clearfix;
+
+  &.page {
+
+  }
+
+  &.post {
+    
+  }
+}
+
+
+/**
+ * Blog Content
+ * Styling single posts
+ */
+#content {
+  .content__post {
+    margin-top: 30px;
+  }
+}
+
+.post-meta {
+
+  font-weight: 300;
+  color: #4b4b47;
+  color: rgba(75,75,71,0.6);
+
+  .meta { margin-right: 25px; }
+
+  .fa { margin-right: 5px; }
+
+  @include media(mobile) {
+    .meta {
+      float: left;
+      clear: both;
+      margin: 10px 0 0;
+    }
+  }
+}

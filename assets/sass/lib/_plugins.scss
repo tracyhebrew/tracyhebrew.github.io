@@ -1,0 +1,552 @@
+// _plugins.scss
+
+
+/**
+ * Animate CSS
+ * Supplement classes for duration
+ */
+.animated-500 {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated-250 {
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes rotating {
+  from{ -webkit-transform: rotate(0deg); }
+  to{ -webkit-transform: rotate(360deg); }
+}
+@keyframes rotating {
+  from{ 
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to{ 
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  -moz-animation: rotating 1.5s linear infinite;
+  -ms-animation: rotating 1.5s linear infinite;
+  -webkit-animation: rotating 1.5s linear infinite;
+  animation: rotating 1.5s linear infinite;
+}
+
+
+
+@-webkit-keyframes shakeFast {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  30%, 60%, 90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  15%, 45%, 75% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shakeFast {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  30%, 60%, 90% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  15%, 45%, 75% {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+.shakeFast {
+  -webkit-animation-name: shakeFast;
+  animation-name: shakeFast;
+}
+
+
+
+/**
+ * Headroom.js
+ */
+.headroom {
+  @include transition(transform 200ms linear)
+}
+.headroom--fixed {
+  position:fixed;
+  z-index:100;
+}
+.headroom--pinned {
+  @include transform(translateY(0%));
+}
+.headroom--unpinned {
+    @include transform(translateY(-100%));
+
+    .navigation-loggedin .menu-main-loggedin li.current a:before { display:none; }
+}
+
+
+
+/**
+ * Font Awesome
+ */
+.fa-l { padding-right: 5px; }
+.fa-r { padding-left: 5px; }
+
+
+
+
+/**
+ * LazyLoad
+ */
+.lazyload {
+  @include opacity(0);
+  visibility: hidden;
+  cursor: pointer;
+  position: relative;
+
+  /* TRANSITION */
+  @include transition(opacity 150ms, visibility 150ms);
+
+  &.show {
+    @include opacity(1);
+    visibility: visible;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  // .btn--lazyload {
+  //   width: 80px;
+  //   height: 60px;
+  //   display: block;
+  //   background: rgba(0,0,0,.8);
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   margin-top: -30px;
+  //   margin-left: -40px;
+  //   text-align: center;
+  //   @include border-radius(10px); 
+  //   @include transition(all 100ms linear);
+
+  //   .fa { 
+  //     line-height: 60px;
+  //     font-size: 30px;
+  //     color: #fff;
+  //     @include transition(all 100ms linear);
+
+  //     &:before { margin-left: 8px; }
+  //   }
+    
+  //   &:hover {
+  //     background: rgba(0,0,0,1);
+
+  //     .fa { font-size: 35px; }
+  //   }
+  // }
+
+  .btn--lazyload {
+    width: 104px;
+    height: 104px;
+    display: block;
+    margin: 0 auto 30px;
+    border: 2px solid #fff;
+    border-radius: 52px;
+    background-clip: padding-box;
+    @include transition(all 100ms linear);
+
+    &.blue {
+      background-color: #0e758b; 
+      background-color: rgba(14,117,139,0.6);
+    }
+
+    &.white {
+      background-color: #fff;
+      background-color: rgba(255,255,255,0.2);
+    }
+    
+    .fa {
+      line-height: 104px;
+      font-size: 35px;
+      color: #fff;
+
+      &:before {
+        margin-left: 10px;
+      }
+    }
+
+    &:hover {
+      // @include transform(scale3d(1.05, 1.05, 1));
+      .fa {
+        font-size: 38px;
+      }
+    }
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+//.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider { margin: 0 0 60px; background: #fff; border: 4px solid #fff; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); -o-box-shadow: 0 1px 4px rgba(0,0,0,.2); box-shadow: 0 1px 4px rgba(0,0,0,.2); zoom: 1; }
+.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+.loading .flex-viewport { max-height: 300px; }
+.flexslider .slides { zoom: 1; }
+.carousel li { margin-right: 5px; }
+
+/* Direction Nav */
+.flex-direction-nav {*height: 0;}
+.flex-direction-nav a  { text-decoration:none; display: block; width: 40px; height: 40px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; cursor: pointer; color: #fff; text-shadow: none; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; }
+.flex-direction-nav .flex-prev { left: 10px; @include opacity(1);}
+.flex-direction-nav .flex-next { right: 10px; text-align: right; @include opacity(1);}
+// .flexslider:hover .flex-prev { opacity: 0.7; left: 10px; }
+// .flexslider:hover .flex-next { opacity: 0.7; right: 10px; }
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
+.flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
+.flex-direction-nav a:before  { font-family: "fontawesome"; font-size: 40px; display: inline-block; content: '\f104'; }
+.flex-direction-nav a.flex-next:before  { content: '\f105'; }
+
+/* Pause/Play */
+.flex-pauseplay a { display: block; width: 20px; height: 20px; position: absolute; bottom: 5px; left: 10px; opacity: 0.8; z-index: 10; overflow: hidden; cursor: pointer; color: #000; }
+.flex-pauseplay a:before  { font-family: "fontawesome"; font-size: 20px; display: inline-block; content: '\f04b'; }
+.flex-pauseplay a:hover  { opacity: 1; }
+.flex-pauseplay a.flex-play:before { content: '\f04c'; }
+
+/* Control Nav */
+.flex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}
+.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.5); cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); box-shadow: inset 0 0 3px rgba(0,0,0,0.3); }
+.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
+.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+
+.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.flex-control-thumbs img:hover {opacity: 1;}
+.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+}
+
+
+/* CUSTOM FLEXSLIDERS
+================================================= */
+.flexslider {
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+
+  .flex-control-nav { display: none; }
+
+  &.flexslider--show-paging {
+    .flex-control-nav { 
+      display: block; 
+      z-index: 99;
+    }
+  }
+
+  .flex-direction-nav {
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    top: 50%;
+    margin-top: -37px;
+  }
+
+  .flex-direction-nav a {
+    height: 76px;
+    width: 38px;
+    line-height: 75px;
+    background: rgba(255,255,255,0.5);
+
+    &:before {
+      //margin-top: 15px;
+      font-size: 30px;
+    }
+
+    &:hover { background: rgba(255,255,255,0.65); }
+  }
+  
+  a.flex-prev {
+    height: 76px;
+    width: 38px;
+    left: 0;
+    border-radius: 0 76px 76px 0;
+    -moz-border-radius: 0 76px 76px 0;
+    -webkit-border-radius: 0 76px 76px 0;
+    
+
+    &:before { margin-left: 5px; }
+  }
+
+  a.flex-next {
+    height: 76px;
+    width: 38px;
+    right: 0;
+    border-radius: 76px 0 0 76px;
+    -moz-border-radius: 76px 0 0 76px;
+    -webkit-border-radius: 76px 0 0 76px;
+
+    &:before { margin-right: 5px;}
+  }
+
+  .flexslider__photo {
+    @extend %bg-cover;
+  }
+}
+
+/* CUSTOM: FLEXSLIDER HALVES
+
+/* LARGE FLEXSLIDER
+================================================= */
+.flexslider.flexslider--large {
+  height: 630px;
+
+  ul.slides { height: 630px; }
+
+  li.slide {
+    height: 630px;
+    @extend %bg-cover;
+  }
+
+  .flex-direction-nav {
+    height: 80px;
+    top: 50%;
+    margin-top: -40px;
+
+    a { margin-top: -38px; }
+
+    a:before { margin-top: 0; }
+  }
+
+  &.flexslider--show-paging {
+    .flex-control-nav {
+      width: 100%;
+      position: absolute;
+      bottom: 40px;
+
+      li a {
+        background: transparent;
+        border: 2px solid #fff;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+
+        &.flex-active {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  @include media(mobile) {
+    .flex-direction-nav { display: none; }
+  }
+}
+
+/* CIRCLE
+================================================= */
+
+
+/* SLICK SLIDER
+================================================= */
+/* Slider */
+.slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
+
+.slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
+.slick-list:focus { outline: none; }
+.slick-loading .slick-list { background: #fff url('../images/ajax-loader.gif') center center no-repeat; }
+.slick-list.dragging { cursor: pointer; cursor: hand; }
+
+.slick-slider .slick-track { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+.slick-track { position: relative; left: 0; top: 0; display: block; }
+.slick-track:before, .slick-track:after { content: ''; display: table; }
+.slick-track:after { clear: both; }
+.slick-loading .slick-track { visibility: hidden; }
+
+.slick-slide { float: left; height: 100%; min-height: 1px; display: none; }
+[dir="rtl"] .slick-slide { float: right; }
+.slick-slide img { display: block; }
+.slick-slide.slick-loading img { display: none; }
+.slick-slide.dragging img { pointer-events: none; }
+.slick-initialized .slick-slide { display: block; }
+.slick-loading .slick-slide { visibility: hidden; }
+.slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
+
+/* Icons */
+@font-face { font-family: 'slick'; src: url('../fonts/slick/slick.eot'); src: url('../fonts/slick/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url("./fonts/slick.svg#slick") format("svg"); font-weight: normal; font-style: normal; }
+/* Arrows */
+.slick-prev, .slick-next { position: absolute; display: block; height: 20px; width: 20px; line-height: 0; font-size: 0; cursor: pointer; background: transparent; color: transparent; top: 50%; margin-top: -10px; padding: 0; border: none; outline: none; }
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { outline: none; background: transparent; color: transparent; }
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before { opacity: 1; }
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before { opacity: 0.25; }
+
+.slick-prev:before, .slick-next:before { font-family: "slick"; font-size: 20px; line-height: 1; color: white; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.slick-prev { left: -25px; }
+[dir="rtl"] .slick-prev { left: auto; right: -25px; }
+.slick-prev:before { content: "←"; }
+[dir="rtl"] .slick-prev:before { content: "→"; }
+
+.slick-next { right: -25px; }
+[dir="rtl"] .slick-next { left: -25px; right: auto; }
+.slick-next:before { content: "→"; }
+[dir="rtl"] .slick-next:before { content: "←"; }
+
+/* Dots */
+.slick-slider { margin-bottom: 30px; }
+
+.slick-dots { position: absolute; bottom: -45px; list-style: none; display: block; text-align: center; padding: 0; width: 100%; }
+.slick-dots li { position: relative; display: inline-block; height: 20px; width: 20px; margin: 0 5px; padding: 0; cursor: pointer; }
+.slick-dots li button { border: 0; background: transparent; display: block; height: 20px; width: 20px; outline: none; line-height: 0; font-size: 0; color: transparent; padding: 5px; cursor: pointer; }
+.slick-dots li button:hover, .slick-dots li button:focus { outline: none; }
+.slick-dots li button:hover:before, .slick-dots li button:focus:before { opacity: 1; }
+.slick-dots li button:before { position: absolute; top: 0; left: 0; content: "•"; width: 20px; height: 20px; font-family: "slick"; font-size: 6px; line-height: 20px; text-align: center; color: black; opacity: 0.25; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.slick-dots li.slick-active button:before { color: black; opacity: 0.75; }
+
+/*# sourceMappingURL=slick.css.map */
+
+/* CUSTOM SLICK
+================================================= */
+.slick-prev:before, .slick-next:before { 
+  font-family: $fa; 
+  font-size: 30px; 
+  line-height: 1; 
+  color: white; 
+  opacity: 0.75; 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+.slick-prev, .slick-next {
+  margin-top: -38px;
+  width: 38px;
+  height: 76px;
+  background: rgba(255,255,255,0.5) !important;
+
+  &:hover {
+    background: rgba(255,255,255,0.5);
+  }
+}
+
+.slick-prev {
+  left: 0;
+  @include border-radius(0 76px 76px 0);
+
+  &:before {
+    content: '\f104';
+    margin-left: -10px;
+  }
+}
+
+.slick-next {
+  right: 0;
+  @include border-radius(76px 0 0 76px);
+
+  &:before {
+    content: '\f105';
+    margin-right: -10px;
+  }
+}
+
+.slick-dots {
+  bottom: 0;
+}
+
+.slick-dots li {
+  text-align: center;
+
+  button {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    display: block;
+    border: 2px solid #fff;
+    @include border-radius(50%);
+
+    &:before { display: none; }
+  }
+
+  &.slick-active button {
+    background: #fff;
+  }
+}
+
+@include media(mobile) {
+  .slick-dots li button {
+    width: 5px;
+    height: 5px;
+  }
+}

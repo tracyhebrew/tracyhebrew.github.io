@@ -1,0 +1,105 @@
+// _modals.scss
+
+/* GENERAL MODAL STYLES
+================================================= */
+#modals {
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  @include filter-gradient(rgba(255,255,255, 0.85), rgba(255,255,255, 0.85), vertical);
+  @include background-image(linear-gradient(top,  rgba(255,255,255, 0.85) 0%,rgba(255,255,255, 0.85) 100%));
+  /* TRANSITION */
+  @include transition(opacity 250ms);
+  visibility: hidden;
+  @include opacity(0);
+  z-index:-1;
+
+  &.show {
+    visibility: visible;
+    @include opacity(1);
+    z-index:10000;    
+  }  
+}
+
+.modal {
+  position:absolute;
+  left:10%;
+  width:80%;
+  margin:0 auto;
+  min-height:300px;
+  padding: 100px 60px;
+  // background-color: #f1efe7;
+  @include filter-gradient(rgba(255,255,255, 0.95), rgba(255,255,255, 0.95), vertical);
+  @include background-image(linear-gradient(top,  rgba(255,255,255, 0.95) 0%,rgba(255,255,255, 0.95) 100%));
+  border: 2px solid #cfcbc3;
+  @include border-radius(10px);
+  @include background-clip(padding-box);
+  @include box-shadow(0 0 84px 14px rgba(55,55,55,.5));
+  /* TRANSITION */
+  // @include transition(top 150ms);
+  visibility:hidden;
+  top:-110%;
+
+  &.show {
+    visibility: visible;
+    top:11%;
+  }
+
+  &.modal--small {
+    width: 30%;
+    padding: 50px;
+    left: 35%;
+    top: 20%;
+
+    @include media(mobile) {
+      width: 90%;
+      left: 5%;
+      padding: 10px;
+      
+      .modal-close {
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+.modal-close {
+  position:absolute;
+  top:25px;
+  right:25px;
+  color: $colorTextGray;
+  font-size:em(32px);
+  cursor:pointer;
+  @include transition(all 100ms linear);
+  @include transform(scale3d(1));
+
+  &:hover {
+    color: $colorPrimary;
+    @include transform(scaleX(1.2));
+  }
+}
+
+.modal-content {
+  text-align: center;
+
+  h3 { color: #a19b94; }
+}
+
+/* SPECIFIC MODAL STYLES
+================================================= */
+.modal#fb-like {
+
+  @include media(mobile) {
+    width: 90%;
+    left: 5%;
+    padding: 10px;
+    
+    .modal-close {
+      top: 10px;
+      right: 10px;
+    }
+  }
+}

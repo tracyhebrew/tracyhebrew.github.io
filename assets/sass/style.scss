@@ -1,0 +1,49 @@
+/* style.scss */
+  
+// Dependencies
+@import "compass",
+        "lib/ffw";
+
+// Components & Libraries     
+@import "../components/normalize.css/normalize.css"; 
+@import "../components/animate.css/animate.min.css";
+@import "../components/font-awesome/css/font-awesome.min.css";
+
+
+// Config Vars
+@import "config"; 
+
+// Core
+@import "lib/grid",
+        "lib/body",
+        "lib/helpers",
+        "lib/fonts",
+        "lib/forms",
+        "lib/buttons",
+        "lib/plugins";
+
+// Modules
+@import "modules/elements",
+        "modules/header",
+        "modules/hero",
+        "modules/modals",
+        "modules/sliders",
+        "modules/social",
+        "modules/content",
+        "modules/footer",
+        "modules/sidebarcart";
+
+
+// Pages
+@import "pages/home",
+        "pages/problem",
+        "pages/about",
+        "pages/donate",
+        "pages/investigations",
+        "pages/blog",
+        "pages/shop";
+
+
+// Media Queries
+@import "media/mobile",
+        "media/ie";

@@ -1,0 +1,422 @@
+// _hero.scss
+
+
+/**
+ * Hero
+ * Hero unit with various page-specific inheritors
+ */
+#hero {
+	h1, h2, h3, h4, h5, h6, p { color: #fff; }
+
+	h1 { margin: 0; }
+	h5 { margin: 0; font-weight: 100; }
+}
+
+#hero.hero {
+	height: 500px;
+	width: 100%;
+	background-color: $colorPrimary;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	@include background-size(cover);
+
+	.hero__container { 
+		@extend %container;
+		height: 500px;
+		display: table; 
+	}
+	.hero__inner { 
+		display: table-cell; 
+		vertical-align: bottom;
+		padding-bottom: 140px;
+	}
+
+	&.hero--xtall {
+		height: 675px;
+
+		.hero__container { height: 675px; }
+	}
+
+	@include media(mobile) {
+		height: 400px;
+		
+		.hero__container { height: 300px; }
+		
+		.hero__inner {
+			vertical-align: middle;
+			padding-bottom: 0;
+		}
+
+		br { display: none; }
+
+		&.hero--xtall {
+			height: 500px;
+
+			.hero__container { height: 500px; }
+		}
+	}
+}
+
+/* PARALLAX
+================================================= */
+.hero--parallax {
+	height: 500px;
+}
+
+.parallax__container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  // opacity: 0;
+}
+.parallax__content {
+  max-width: 450px;
+  margin: -150px auto 0 auto;
+  display: table-cell;
+  vertical-align: bottom;
+  padding-bottom: 140px;
+  color: #fff;
+  text-align: center
+}
+.parallax__bg {
+  //background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;	
+  @include background-size(contain);
+  height: 100%;
+  width: 100%;
+}
+
+.parallax__inner {
+	@include transition(all 200ms linear);
+}
+
+@media screen and (max-width: 1199px) {
+	.parallax__bg { 
+		// width: auto;
+		// height: 100%;
+		@include background-size(auto);
+	}
+}
+
+@include media(mobile) {
+	.hero--parallax { height: 400px; }
+
+	.parallax__bg {
+		@include background-size(cover);
+	}
+}
+
+
+/* HERO VIDEO
+================================================= */
+.hero--video {
+	background: transparent;
+	position: relative;
+	padding: 0;
+	height: 500px;
+	background-position: 50% 50%;
+	@include background-size(cover);
+	background-repeat: no-repeat;
+
+	.hero__container {
+		width: 100%;
+		height: 500px;
+	}
+
+	.hero__inner {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		margin-top: 130px;
+
+		p { font-size: 18px; margin: 1rem 0; }
+	}
+
+	.parallax__bg.hero__inner {
+		margin-top: 0;
+	}
+  
+	a.hero--video__play {
+		width: 104px;
+		height: 104px;
+		display: block;
+		margin: 0 auto 30px;
+		border: 2px solid #fff;
+		border-radius: 52px;
+		background-clip: padding-box;
+		@include transition(all 100ms linear);
+
+		&.blue {
+			background-color: #0e758b; 
+			background-color: rgba(14,117,139,0.6);
+		}
+
+		&.white {
+			background-color: #fff;
+			background-color: rgba(255,255,255,0.2);
+		}
+		
+		.fa {
+			line-height: 104px;
+			font-size: 35px;
+
+			&:before {
+				margin-left: 10px;
+			}
+		}
+
+		&:hover {
+			// @include transform(scale3d(1.05, 1.05, 1));
+			.fa {
+				font-size: 38px;
+			}
+		}
+	}
+
+	#hero--video__close {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: #ffffff;
+		background: transparent;
+		padding: 10px;
+		z-index: 9999;
+		font-family: $default;
+		text-transform: uppercase;
+		@include transition(all 200ms linear);
+	}
+
+	iframe { 
+		width: 100%; 
+		height: 100%;
+	}
+
+	@include media(mobile) {
+		height: 400px;
+		background-size: auto 100%;
+
+		.hero__inner {
+			margin-top: 75px;
+			padding: 0 20px;
+
+			br { display: none; }
+		}
+
+		a.hero--video__play {
+			width: 76px;
+			height: 76px;
+			margin-bottom: 10px;
+			@include border-radius(38px);
+
+			.fa { line-height: 76px; }
+		}
+	}
+}
+
+/* GET INVOLVED
+================================================= */
+.hero--parallax.hero--involved .parallax__bg {
+	background-image: url('../images/hero-getinvolved.jpg');
+}
+
+/* THE PROBLEM
+================================================= */
+.hero--video.hero--problem .parallax__bg {
+	background-image: url('../images/hero-problem.jpg');
+}
+
+/* ABOUT
+================================================= */
+#hero.hero--about  .parallax__bg {
+	background-image: url('../images/hero-about.jpg');
+}
+
+/* DONATE
+================================================= */
+#hero.hero--donate {
+	background-image: url('../images/hero-donate.jpg');
+}
+
+/* INVESTIGATIONS
+================================================= */
+#hero.hero--investigations .parallax__bg {
+	// background-image: url('../images/hero-investigations.jpg');
+	background-image: url('../images/hero-investigations_yellow.jpg');
+}
+
+/* HERO MERCH PAGES
+================================================= */
+#hero.hero--merch {
+	height: 400px;
+	@include background-size(cover);
+}
+
+/* BLOG ARCHIVE
+================================================= */
+#hero.hero--blog {
+	height: 245px;
+	background-color: #1fcfef; 
+	background-image: radial-gradient(center 10%, 300px 300px, rgba(53,196,201,.6) 0%, rgba(3,152,194,.8) 200%);
+	@include opacity(0.6);
+
+	.container { 
+		height: 245px;
+		display: table; 
+	}
+
+	.hero__inner {
+		display: table-cell;
+		vertical-align: bottom;
+		padding-bottom: 40px;
+	}
+}
+
+#hero.hero--blog.single .parallax__bg {
+	background-image: url('../images/hero-blogsample.jpg');
+}
+
+/* BLOG SINGLE
+================================================= */
+#hero.hero--blog.single {
+	height: 150px;
+}
+
+@include media(mobile) {
+	#hero.hero--blog {
+		height: 150px;
+
+		.container { height: 150px; }
+
+		.hero__inner { padding-bottom: 30px; }
+	}
+}
+
+
+/* GEN HERO MOBILE STYLES
+================================================= */
+@include media(mobile) {
+	#hero {
+		br { display: none; }
+		
+		.parallax__bg {
+			background-attachment: initial;
+			background-position: 50% 50%;
+		}
+
+		.parallax__content {
+			vertical-align: middle;
+			padding-bottom: 0;
+		}
+	}
+}
+
+/* HOME HERO: Video / Mobile
+================================================= */
+.hero--videobg.home {
+	height: 675px;
+	position: relative;
+
+	.hero--videobg__container {
+		width: 100%;
+		height: 100%;
+		// display: table;
+
+		.hero--videobg__inner {
+			width: 100%;
+			height: 100%;
+			display: table;
+			z-index: 99;
+			position: absolute;
+			
+			.inner {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+
+		video {
+			position: absolute;
+			width: 100%;
+			height: auto;
+			// height: 100%;
+			@include background-size(cover);
+			background-position: 50% 50%;
+			left: 0;
+			top: 0;
+			z-index: 0;
+			overflow: hidden;
+		}
+
+		@media screen and (max-width: 1199px) {
+			video { 
+				width: auto;
+				height: 100%;
+			}
+		}
+	}
+}
+
+#hero.overlay-blue {
+	position: relative;
+	&:before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url(../images/hero-home_bg.jpg);
+		@include background-size(cover);
+	}
+
+	&:after{
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// background-color: #1fcfef;
+		// background-image: radial-gradient(center 16%, 100px 100px, rgba(53,196,201,.6) 0%, rgba(3,152,194,.8) 100%);
+		// @include opacity(.6);
+		// background: rgba(1,167,223,0.3);
+		background: -moz-radial-gradient(center, ellipse cover, rgba(53,196,201,0.6) 0%, rgba(3,152,194,0.8) 100%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(53,196,201,0.6)), color-stop(100%,rgba(3,152,194,0.8)));
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(53,196,201,0.6) 0%,rgba(3,152,194,0.8) 100%);
+		background: -o-radial-gradient(center, ellipse cover, rgba(53,196,201,0.6) 0%,rgba(3,152,194,0.8) 100%);
+		background: -ms-radial-gradient(center, ellipse cover, rgba(53,196,201,0.6) 0%,rgba(3,152,194,0.8) 100%);
+		background: radial-gradient(ellipse at center, rgba(53,196,201,0.6) 0%,rgba(3,152,194,0.8) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9935c4c9', endColorstr='#cc0398c2',GradientType=1 );
+	}
+}
+
+#hero-ie-overlay { display: none; }
+
+body.is_mobile .hero--videobg.home .hero--videobg__container video {
+	width: auto;
+	height: 675px;
+}
+
+#hero.hero.home-mobile { 
+	display: none;
+	background: url(../images/hero-home.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	@include background-size(cover);
+
+	.hero__container {
+		height: 400px;
+	}
+}
+
+@include media(mobile) {
+	.hero--videobg.home { display: none; }
+
+	#hero.hero.home-mobile { display: block; }
+}

@@ -1,0 +1,140 @@
+// _buttons.scss
+
+.btn {
+  padding: 15px 40px;
+  font-size: 18px;
+  font-family: $default;
+  font-weight: 100;
+  display: inline-block;
+  @include transition(all 150ms linear);
+
+  &.btn--primary {
+    background: $colorPrimary;
+    color: #fff;
+
+    &:hover { background: darken($colorPrimary,8); }
+  }
+
+  &.btn--transparent {
+    background: transparent;
+    background: rgba(255,255,255,0);
+    color: #fff;
+    border: 2px solid #fff;
+
+    &:hover {
+      background: #fff;
+      background: rgba(255,255,255,0.3);
+    }
+  }
+
+  &.btn--yellow {
+    color: #fff;
+    background: $colorSecondary;
+
+    &:hover {
+      background: darken($colorSecondary,8);
+    }
+  }
+
+  &:active { 
+    @include transform(translateY(5px));
+  }
+  
+  &.active--none {
+    &:active { @include transform(translateY(0px)); }
+  }
+
+  /**
+   * Button Play
+   * 
+   */
+  &.btn--play {
+    .fa { 
+
+    }
+  }
+
+  /**
+   * Button Icon
+   * Use sub-inheritance classes for positioning of nested fa icons
+   */
+  &.btn--icon {
+
+    .fa {
+      top:1px;
+      font-size:24px;
+      color: #000;
+      @include opacity(0.35);
+    }
+
+    span {
+      position:relative;
+      top:-2px;
+    }
+  }
+}
+
+a .fa {
+  @include transition(all 100ms linear);
+}
+
+/**
+ * Button Social
+ * Circles
+ */
+
+.btn--social, %btn--social {
+  width: 40px; 
+  height: 40px;
+  display: block;
+  padding: 0;
+  color: #fff;
+  background: #d2d2d2;
+  text-align: center;
+  @include border-radius(20px);
+  @include transform(scale3d(1, 1, 1));
+  
+  .fa { line-height: 40px; }
+  
+  &:hover {
+    background: $colorSecondary;
+    @include transform(scale3d(1.1, 1.1, 1));
+  }
+
+  &.btn--blue {
+    background: $colorPrimary;
+    &:hover { background: darken($colorPrimary,8); }
+  }
+
+  // Clicked buttons
+  &.btn--visited {
+    background: $colorSecondary;
+    cursor: default;
+  }
+}
+
+/**
+ * Social Buttons for Team
+ * 
+ */
+.btn--team {
+  width: 51px;
+  height: 51px;
+  padding: 0;
+  color: $colorPrimary;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid $colorPrimary;
+  @include border-radius(26px);
+  @include transition(all 100ms linear);
+    
+  .fa {
+    line-height: 51px
+  }
+
+  &:hover {
+    background: $colorPrimary;
+    color: #fff;
+  }
+}
+

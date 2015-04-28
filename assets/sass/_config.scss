@@ -1,0 +1,71 @@
+/* _config.scss */
+
+/**
+ * Grid Settings
+ * Width settings for media queries in pixels
+ * REQUIRED: All
+ */
+$widescreen             : 1280;
+$desktop                : 980;
+$tablet                 : 768;
+$mobile-landscape       : 480;
+$mobile-portrait        : 320;
+$mobile                 : $mobile-landscape;
+
+$columns                : 12;
+$margin                 : 10px;
+$padding                : 10px;
+
+$responsive             : true;
+$from-direction         : left;
+
+
+/**
+ * Colors
+ * Colors of various elements as per style guide
+ * REQUIRED: $colorPrimary<>, $colorSecondary<>, $colorTextDefault
+ */
+
+$colorPrimary:          #01a7df;
+$colorPrimaryDark:			#036e8e;
+$colorSecondary:        #efd345;
+
+$colorTextBody:         #707070;
+$colorTextHeading:			#4c4b47;
+$colorTextLight: 				#c4c4c4; 
+$colorTextGray: 				#707070;
+
+$colorGray:						#c1c1c1;
+$colorGrayLight:			#f3f3f3;
+$colorGrayDark: 			#4c4b47;
+
+/**
+ * Font Sizes
+ * Headings, Paragraphs and other common elements
+ */
+ $fontSizeHeading1:         55px;
+ $fontSizeHeading2:         45px;
+ $fontSizeHeading3:         30px;
+ $fontSizeHeading4:         28px;
+ $fontSizeHeading5:         21px;
+ $fontSizeHeading6:         18px;
+
+
+
+/**
+ * Compass Settings
+ * Flags for compass
+ */
+$experimental-support-for-svg: true;
+
+
+
+/**
+ * Font Settings
+ * Shortened variable names for font families for degradation convenience
+ */
+$default      :  "MuseoSans", Helvetica, "Helvetica Neue", Arial, sans-serif sans-serif;
+$default-alt  :  "Museo Slab", Georgia, serif;
+$serif        :  "Museo Slab", Georgia, serif;
+$serif-alt    :  "adobe-caslon", "Adobe Caslon" serif;
+$fa           :  "fontawesome";

@@ -1,0 +1,380 @@
+//_problem.scss
+
+/* A LIFE OF PAIN - black tiles
+================================================= */
+.tiles--static {
+	.tiles__box.half {
+		width: 50%;
+		width: calc( 50% - 2px);
+		height: 320px;
+		margin-right: 4px;
+		margin-bottom: 4px;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		@include background-size(cover);
+
+		h5, p { color: #fff; }
+
+
+		&:nth-of-type(2n+2) { margin-right: 0; }
+	}
+
+	.tiles__details--black {
+		width: 255px;
+		height: 100%;
+		padding: 30px 20px;
+		opacity: .9;
+		box-shadow: -6px 0 3px rgba(0,0,0,.11);
+		background-image: linear-gradient(left, rgba(60,60,60,.9) 0%, #3c3c3c 100%);
+
+
+		h5 { font-size: em(24px); }
+
+		&.right {
+			float: right; 
+		}
+	}
+
+
+	@include media(mobile) {
+		.tiles__box.half {
+			width: 100%;
+			position: relative;
+			background-position: 50% 0%;
+
+			&:nth-of-type(2n+2) {
+				margin-right: 0;
+			}
+		}
+
+		.tiles__details--black {
+			position: absolute;
+			width: 100%;
+			height: auto;
+			padding: 10px;
+			bottom: 0;
+		}
+	}
+}
+
+
+
+/* BY THE NUMBERS
+================================================= */
+.interstitial.interstitial--stats {
+	.span3 {
+		position: relative;
+
+		&:before {
+			content: '';
+			width: 74px;
+			height: 30px;
+			background: #fff;
+			top: 90px;
+			left: 50%;
+			margin-left: -37px;
+			position: absolute;
+		}
+	}
+	.stat {
+		font-size: em(36px);
+		margin: -20px 0 0;
+		line-height: 1;
+		font-weight: 500;
+		display: block;
+		position: relative;
+		color: #4c4b47;
+
+		&.text-white { color: #fff; }
+
+		.stat__sub {
+			font-size: 20px;
+			margin: 0 0 10px;
+			line-height: 1;
+			font-weight: 500;
+			display: block;
+			clear: both;
+		}
+	}
+
+	.stat__border{
+		width: 120px;
+		height: 120px;
+		margin: 0 auto;
+		border: 5px solid #f3f3f3;
+		@include border-radius(60px);
+
+		.icon {
+			margin: 30px auto 0;
+		}
+	}
+
+	.span3 {
+		p {
+			font-size: 18px;
+			padding: 0 10px;
+			color: $colorTextGray;
+		}
+	}
+	
+
+	/* ICON PIE CHART
+	================================================= */
+	.circliful {
+	  position: relative; 
+	}
+
+	.circle-text, .circle-info, .circle-text-half, .circle-info-half {
+    width: 100%;
+    position: absolute;
+    text-align: centers;
+    display: inline-block;
+	}
+
+	.circle-info, .circle-info-half {
+		color: #999;
+	}
+
+	.circliful .fa {
+		margin: -10px 3px 0 3px;
+		position: relative;
+		bottom: 4px;
+	}
+
+	.stat__circle {
+		margin: 0 auto;
+
+		.icon {
+			position: absolute;
+			left: 32px;
+			top: 35px;
+		}
+
+		.icon.icon--road-yellow {
+			left: 20px;
+			top: 40px;
+		}
+	}
+}
+
+/* BEHIND THE STATS TABS
+================================================= */
+.tabs-container--stories {
+	width: 100%; 
+
+	.tabs__menu--stories {
+		width: 100%;
+		height: 105px;
+	    float: left;
+	    clear: both;
+	    list-style-type: none;
+	    padding: 0;
+	    margin: 40px 0;
+			
+		li {
+			height: 100%;
+	    width: 120px;
+			display: inline-block;
+
+	    a.circle {
+	    	display: block;
+	    	margin: 0 auto;
+	    	padding: 0;
+	    	position: relative;
+	   		border-color: #d9d9d9;
+	    }
+	   
+			&.current {
+		    position: relative;
+		    background-color: #fff;
+		
+
+		    a.circle:before {
+		    	content: '';
+		    	position: absolute;
+		    	width: 100%;
+		    	height: 100%;
+		    	background: red;
+		    	left: 0;
+		    	right: 0;
+		    	@include border-radius(50%);
+		    	@include transparent-bg($colorPrimary,.5);
+		    }
+			}
+			
+			a {
+		    padding: 10px;
+		    text-transform: uppercase;
+		    color: #fff;
+		    text-decoration: none; 
+			}
+		}
+	}
+
+	.tab--stories {
+		width: 100%;
+	    float: left;
+	    margin-bottom: 20px;
+	    text-align: left;
+	    display: table;
+
+    	.tab__content--stories {
+			width: 100%;
+			height: 355px;
+			display: none;
+			//display: table;
+
+			// .span5 { width: 355px; }
+
+			// .span7 {
+			// 	display: table-cell;
+			// 	vertical-align: middle;
+			// }
+
+      // &.current-tab {
+      // 	display: table !important;
+      // }
+			
+			a.link { 
+				font-size: 21px; 
+				color: #adadad;
+
+				&:hover { color: darken(#adadad,8); }
+			}
+
+			.tab__footer {
+				margin-top: 30px; 
+
+				a.btn--social { margin-right: 15px; }
+			}
+    	}
+
+	    #tab-1 {
+	     	display: block;   
+	    }
+		}	
+	
+		a.flex-next,
+		a.flex-prev { color: #fff !important; }
+	
+		// .tab__content--text {
+		// 	display: table-cell;
+		// 	vertical-align: middle;
+		// }
+
+	@include media(mobile) {
+		.tabs__menu--stories {
+			margin-bottom: 0; 
+
+			li {
+			width: 90px; 
+
+				a {
+					width: 80px;
+					height: 80px;
+				}
+			}
+		}
+
+		.tab--stories .tab__content--stories .span5 { 
+			width: 100%; 
+			
+			.flexslider--circle { margin: 0 auto; }
+		}
+
+		.tab--stories .tab__content--stories .span7 {
+			padding-top: 30px;
+		}
+	}
+}
+
+.flexslider--circle {
+	max-width: 355px;
+	height: 363px;
+	position: relative;
+
+	ul.slides, li.slide { 
+		height: 355px; 
+	}
+
+	.slide__photo {
+		width: 355px;
+		height: 355px;
+		border: 7px solid $colorGrayLight;
+		@include border-radius(50%);
+		@extend %bg-cover;
+	}
+
+	.flex-direction-nav {
+	
+		a {
+			width: 50px;
+			height: 75px;
+			line-height: 75px;
+			margin-top: -37px; 
+			background: #fff;
+			background: rgba(255,255,255,.5);
+			text-align: center; 
+
+			&:hover { background: rgba(255,255,255,.8); }
+		}
+
+		a.flex-prev { 
+			left: 0; 
+			@include border-radius(0 50px 50px 0);
+		}
+		a.flex-next { 
+			right: 0; 
+			@include border-radius(50px 0 0 50px);
+		}
+	}
+
+	.flex-control-nav { display: none; }
+
+	@include media(mobile) {
+		max-width: 280px;
+		width: 280px;
+		height: 280px;
+
+		ul.slides, li.slide {
+			height: 280px;
+		}
+
+		.slide__photo {
+			width: 280px;
+			height: 280px;
+		}
+	}
+}
+
+.tab--stories {
+	.flexslider--circle {
+		float: left;
+	}
+
+	.descrip {
+		height: 350px;
+		display: table;
+		padding-left: 40px;
+
+		.inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	@include media(mobile) {
+		.flexslider--circle {
+			float: none;
+			margin: 0 auto;
+		}
+
+		.descrip {
+			height: auto;
+			margin-top: 30px;
+			float: left;
+			padding-left: 0;
+			clear: both;
+		}
+	}
+}

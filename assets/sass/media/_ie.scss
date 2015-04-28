@@ -1,0 +1,46 @@
+// _ie.scss
+
+html.ie {
+	
+	// Navigation slide fix
+	#header.nav-toggle--open .header-right {
+		margin-right: 385px;
+	}
+
+	#header.cart-toggle--open .header-right {
+		margin-right: 290px;
+	}
+
+	// HERO OVERLAY
+	#hero-ie-overlay {
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		background: rgba(1,167,223,0.5);
+		top: 0;
+		left: 0;
+	}
+
+	.parallax-bg {
+		@include background-size(cover);
+	}
+
+	/* HOME
+	================================================= */
+	// Mosaic tiles
+
+	.tiles--mosaic .tiles--slideup:hover .tiles__details {
+		background: rgba(1,167,223,0.4);
+	}
+
+	.tiles--mosaic .tiles--slideright:hover .tiles__slidebg {
+		width: 240px;
+		height: 100%;
+		left: 0;
+		top: 0;
+		position: absolute;
+		background: rgba(1,167,223,0.4);
+	}
+	
+}

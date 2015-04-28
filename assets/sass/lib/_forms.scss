@@ -1,0 +1,548 @@
+// _forms.scss
+
+// $height-input_small    : 68;
+// $height-input_medium   : 68;
+// $height-input_large    : 80;
+// $input-active_color    : #f15966;
+
+$border-color_gray			: #e3e3e2;
+$label-color_gray				: #4b4b4b;
+
+
+form {
+	margin: 2rem 0;
+
+	label { 
+		font-family: $default;
+		font-size: 16px;
+		font-weight: 300;
+		color: $label-color_gray; 
+	}
+
+	p { margin: 0 0 10px; }
+}
+
+/* FIELDSET
+ * ----------------------------------- */
+fieldset, .fieldset {
+	border: none;
+	position: relative;
+	padding: 0;
+	margin: 0;
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="number"] {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+/* FIELDSET WITH ICON LABEL
+ * ----------------------------------- */
+fieldset.fieldset--withicon, .fieldset.fieldset--withicon {
+	position: relative;
+
+	label {
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		.fa { color: #e3e3e2; font-size: 21px; }
+	}
+}
+
+/* MOCK ICON LABEL
+ * ----------------------------------- */
+.fa.label { color: #e3e3e2; font-size: 21px; }
+
+
+/* INPUTS
+ * ----------------------------------- */
+input { 
+	margin-bottom: 10px; 
+	//-webkit-appearance: none; // iOS fix
+    -webkit-border-radius: 0; // iOS fix
+    border-radius: 0; // iOS fix
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+	font-family: $default;
+	font-weight: 100;
+	padding: 0 0 10px 30px;
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid #e1e1df;
+
+	&:focus {
+		outline: none;
+		border-bottom: 2px solid $colorPrimary;
+	}
+
+	&:focus + label .fa {
+		color: $colorPrimary;
+	}
+}
+
+// Visited Input
+input.visited + label .fa {
+	color: $colorPrimary;
+}
+
+/* TEXTAREA
+ * ----------------------------------- */
+fieldset.fieldset--textarea, .fieldset.fieldset--textarea {
+	label { 
+		float: left; 
+		margin-bottom: 10px;
+	}
+	textarea { 
+		width: 100%;
+		float: left; 
+		clear: both;
+	}
+}
+
+textarea {
+	font-family: $default;
+	font-weight: 100;
+	border: 2px solid $border-color_gray;
+
+	&:focus {
+		border: 2px solid $colorPrimary;
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+/* RADIO, CHECKBOX
+ * ----------------------------------- */
+input[type="radio"],
+input[type="checkbox"] {
+	@include opacity(0);
+	margin: 0;
+}
+
+.fieldset.check, fieldset.check {
+	padding: 0;
+	margin-top: 30px;
+}
+
+ul.fieldset.check,
+ul.fieldset.checkbox {
+	list-style-type: none !important; 
+
+	li { 
+		line-height: 1.5;
+		padding-left: 20px;
+		position: relative;
+		margin-bottom: 10px;
+	}
+
+	input[type="radio"]:checked + label:after, input[type="checkbox"]:checked + label:after {
+		top: -8px;
+	}
+}
+
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+input[type="radio"] + label:before, 
+input[type="checkbox"] + label:before {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	content: '';
+	border: 2px solid $border-color_gray;
+	left: 0;
+	top: 0;
+	margin-top: 1px;
+	@include border-radius(50%);
+}
+
+input[type="radio"]:checked + label:before, 
+input[type="checkbox"]:checked + label:before {
+	border-color: $colorSecondary;
+	position: absolute;
+}
+
+input[type="radio"]:checked + label:after, 
+input[type="checkbox"]:checked + label:after {
+	left: 2px;
+	top: -4px;
+	position: absolute;
+	font-family: $fa;
+	content: '\f00c';
+	font-size: 24px;
+	color: $colorSecondary;
+}
+
+/* SELECT
+ * ----------------------------------- */
+
+.fieldset.select, fieldset.select {
+	select, label { float: left; }
+
+	label + select { 
+		margin-top: 5px;
+		clear: both; 
+	}
+}
+
+select {
+	height: 31px;
+	font-family: $default;
+	font-weight: 100;
+	border: 2px solid $border-color_gray;
+	background: #fff;
+
+	&:focus {
+		outline: none;
+		border: 2px solid $colorPrimary;
+	}
+}
+
+/* INPUT SUBMIT
+ * ----------------------------------- */
+input[type="submit"], button[type="submit"] {
+	border: none;
+	margin: 30px 0 0;
+	background: $colorPrimary;
+	@include transition(all 100ms linear);
+
+	&:focus {
+		outline: none;
+		background: darken($colorPrimary,8);
+	}
+}
+
+/* -----------------------------------
+  NEWSLETTER SIGNUP FORM 
+----------------------------------- */
+.form--signup {
+	width: 790px;
+	margin: 0 auto;
+
+	fieldset, .fieldset {
+		margin-top: 30px; 
+		float: left;
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="number"] { margin: 0; }
+
+		&.offset1 {
+			margin-left: 8.333333333333332%;
+		}
+	}
+
+	.fieldset.email {
+		width: 290px;
+		margin: 30px 30px 0;
+	}
+	
+	.fieldset.name {
+		width: 290px;
+		
+		input#name_first,
+		input#name_last {
+			width: calc( 50% - 5px);
+			float: left;
+		}
+
+		input#name_last { 
+			margin-left: 5px;
+			padding-left: 5px;
+		}
+
+	}
+
+	.fieldset.zipcode {
+		width: 150px;
+	}
+
+	.fieldset.checkbox.align-center {
+		margin-left: 25%;
+
+		// input[type="radio"]:checked + label, 
+		// input[type="checkbox"]:checked + label { color: $colorSecondary; }
+	}
+
+	@include media(mobile) {
+		width: 100%;
+
+		fieldset, .fieldset { margin-top: 15px; }
+		
+		.fieldset.name,
+		.fieldset.zipcode { width: 100%; }
+	
+		.fieldset.email {
+			width: 100%;
+			margin: 15px 0 0;
+		}
+
+		.fieldset.checkbox.align-center {
+			margin-left: 0;
+		}
+	}
+
+	// WITH ADDITIONAL FIELDS: Address
+	&.extended-fields {
+		.fieldset.name, fieldset.name,
+		.fieldset.email, fieldset.email { 
+			width: calc(50% - 15px); 
+			margin-right: 0;
+		}
+
+		.fieldset.email, fieldset.email {
+			margin-left: 30px;
+			margin-right: 0;
+		}
+
+		input#address, input#city {
+			width: 40%;
+			width: calc(40% - 4px);
+			float: left;
+		}
+		input#state {
+			width: 20%;
+			width: calc(20% - 4px);
+			float: left;
+		}
+
+		input#city, input#state { 
+			padding-left: 5px;
+			margin-left: 5px; 
+		}
+
+		input#zipcode, select#country {
+			width: 20%;
+			width: calc(20% - 2.5px);
+			margin-top: 15px;
+		}
+
+		input#zipcode {
+			padding-left: 5px;
+		}
+
+		select#country {
+			margin-left: 5px;
+			height: 40px;
+			background: transparent;
+			border: none;
+			border-bottom: 2px solid $border-color_gray;
+			@include border-radius(0px);
+			-webkit-appearance: none;
+			  -webkit-border-radius: 0px;
+		}
+
+		@include media(mobile) {
+			.fieldset.name, fieldset.name,
+			.fieldset.email, fieldset.email { 
+				width: 100%; 
+				margin-left: 0;
+			}
+
+			input#address, input#city, input#state, input#zipcode, select#country {
+				width: 100%;
+			}
+
+			input#city, input#state, input#zipcode, select#country {
+				margin-top: 10px;
+				margin-left: 0;
+				padding-left: 5px;
+			}
+		}
+
+	}
+}
+
+
+/* -----------------------------------
+  DONATE FORM STYLES
+----------------------------------- */
+.form--donation__container {
+	width: 400px;
+	margin: 0 auto;
+	padding: 40px;
+	border: 1px solid #d7d9dd;
+	background-color: #fff;
+	background-color: rgba(255,255,255,0.8);
+	display: inline-block;
+}
+
+.form--donation__form {
+	max-width: 570px;
+	margin: 0 auto;
+	z-index: 999;
+	
+	label {
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		.fa { color: #e3e3e2; font-size: 21px; }
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="number"] {
+		height: 45px;
+		border: 1px solid #e1e1e1; 
+		line-height: 45px;
+		padding: 0;
+		@include border-radius(3px);
+		background-clip: padding-box;
+		background-color: #f9f9f9;
+		color: $colorTextBody;
+
+		&::-webkit-input-placeholder,
+		&:-moz-placeholder,
+		&::-moz-placeholder,
+		&:-ms-input-placeholder {
+	   	color: #4b4b4b;
+	   	color: rgba(75,75,75,0.6);
+	   	font-family: "Open Sans", sans-serif;
+	   	font-size: 14px;
+	   	font-weight: 500;
+		}
+
+		&:focus {
+			line-height: 45px;
+		}
+	}
+	
+	// Remove input number spinners
+	input[type=number] {
+		-moz-appearance:textfield;
+	}
+
+	input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+   margin: 0;
+	}
+
+	fieldset {
+		padding: 0;
+	}
+
+	label {
+		.fa { 
+			font-size: 18px;
+			color: #4f4f4f; 
+			margin-left: 15px;
+		}
+	}
+
+	fieldset.input-amount {
+		width: 100%;
+		float: left; 
+
+		label .fa {
+			font-size: 28px;
+			top: 50%;
+			margin-top: 18px;
+			margin-left: 15px;
+		}
+
+		label.usd { 
+			width: 20px;
+			font-family: "Open Sans", "fontawesome";
+			font-size: 15px;
+			font-weight: 600;
+			color: #929292;
+			text-align: right;
+			top: 22px;
+			right: 25px;
+			left: auto;
+		}
+
+		input { width: 100%; margin-bottom: 0; }
+	}
+
+	input#donationAmount { 
+		width: 100%;
+		height: 65px; 
+		padding: 0 60px 0 40px;
+		line-height: 1;
+
+		&::-webkit-input-placeholder { font-size: 21px; }
+		&:-moz-placeholder { font-size: 21px; }
+		&::-moz-placeholder { font-size: 21px; }
+		&:-ms-input-placeholder { font-size: 21px; }
+	}
+	
+	button[type="submit"] { margin-top: 0; }
+
+	.btn--primary {
+		width: 150px;
+		font-family: "Open Sans", "fontawesome";
+		font-size: 15px;
+		font-weight: 600;
+		text-transform: uppercase;
+		padding: 20px;
+		border: 1px solid #e1e1e1;
+		@include border-radius(4px);
+
+		.fa { 
+			margin-left: 20px;
+			color: #057b9f; 
+		}
+
+		&:hover {
+		}
+		
+		&.right { float: right;}
+	}
+	
+	.btn--submit {
+		float: left;
+	}
+
+	.option-or {
+		float: left;
+		margin-left: 40px;
+		font-family: "Open Sans", sans-serif;
+		font-size: 13px;
+		font-weight: bold;
+		line-height: 62px;
+		color: #9f9f9f;
+	}
+
+	a.check {
+		display: inline-block;
+		color: #9f9f9f;
+		font-family: "Open Sans", sans-serif;
+		font-size: 15px;
+		font-weight: 500;
+
+		&:hover { font-weight: 700; }
+	}
+}
+
+@include media(mobile) {
+	.form--donation__container {
+		max-width: 280px;
+		width: 100%;
+		padding: 40px 20px;
+	}
+
+	.form--donation__form {
+		max-width: 100%;
+
+		.btn--primary {
+			width: 48%;
+		}
+	}
+}

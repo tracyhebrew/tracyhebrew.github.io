@@ -1,0 +1,78 @@
+// _footer.scss
+footer {
+	float: left;
+	width: 100%;
+}
+
+/* SOCIAL FOOTER
+================================================= */
+.footer--social {
+	background: $colorGrayLight; 
+	padding: 30px 0;
+
+	.container-full {
+		width: 100%;
+		float: left;
+		padding: 0 50px;
+		display: table;
+	}
+
+	.logo { float: left; }
+
+	.menu--social { 
+		margin-top: 0;
+		display: table-cell;
+		vertical-align: middle;	
+		text-align: right;
+
+		a { margin-left: 16px; }
+	}
+
+	@include media(mobile) {
+		.container-full { padding: 0 10px; }
+
+		.logo {
+			float: none;
+			margin: 0 auto 30px;
+		}
+
+		.menu--social {
+			width: 100%;
+			float: left;
+			text-align: center;
+
+			a { margin: 0 5px;}
+		}
+	}
+}
+
+/* CONTACT
+================================================= */
+.footer--contact {
+	padding: 20px 0;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #bec2bf;
+	background: #fafafa;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	span {
+		padding: 0 8px; 
+	}
+
+	a:hover {
+		color: $colorPrimary;
+
+		span { color: #bec2bf; }
+	}
+
+	@include media(mobile) {
+		span { display: none; }
+		a { display: block; }
+		a:nth-of-type(2) { margin: 10px 0; }
+	}
+}

@@ -1,0 +1,277 @@
+// _investigations.scss
+
+/* SLICE OF CRUELTY
+================================================= */
+.latest-investigation {
+	height: 555px;
+	background-image: url(../images/lazyload-slice.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	display: table;
+	@include background-size(cover);
+	
+	.container {
+		height: 100%;
+		display: table-cell;
+		vertical-align: middle;
+
+		p { 
+			max-width: 620px;
+			margin: 0 auto; 
+		}
+	}
+
+	.lazyload__content {
+		color: #fff;
+	}
+
+	iframe {
+		max-height: 543px;
+	}
+}
+
+/* SIGN THE PETITION
+================================================= */
+.inverted-triangle {
+	position: relative;
+	width: 100%;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 50%;
+		left: 0;
+		top: 0;
+		margin-top: -12px;
+		border-bottom: 12px solid #f3f3f3;
+		border-right: 12px solid transparent;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 50%;
+		right: 0;
+		top: 0;
+		margin-top: -12px;
+		border-bottom: 12px solid #f3f3f3;
+		border-left: 12px solid transparent;
+	}
+}
+
+/* PAST INVESTIGATIONS - Video playlist
+================================================= */
+.section--videoPlaylist {
+	padding-bottom: 140px; 
+
+	h4 {
+		color: #262729; 
+	}
+}
+
+.videoPlayer {
+	height: 350px;
+}
+
+.video__desc--current {
+	padding: 30px 25px;
+	background: #f3f3f3;
+	height: 100%;
+
+	h5 {
+		color: #262729;
+		margin: 0;
+	}
+
+	h6 {
+		color: #707070;
+	}
+
+	a { 
+		color: $colorPrimary;
+
+		&:hover { color: darken($colorPrimary,8); }
+	}
+}
+
+.video__desc {
+	display: none;
+}
+
+.videoPlayer__container {
+	height: 350px;
+	position: relative;
+	padding-bottom: 52%;
+	padding-top: 30px; 
+	height: 0; 
+}
+
+.videoPlayer__container iframe,
+.videoPlayer__container object,
+.videoPlayer__container embed {
+	height: 350px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+// PLAYLIST
+.investigation {
+	h4 { 
+		margin-top: 80px;
+		float: left;
+	}
+
+	li.playlist__video {
+		list-style-type: none;
+		float: left;
+		height: 130px;
+		position: relative;
+		cursor: pointer;
+		margin-right: 3px;
+	}
+
+	.playlist__thumb {
+		width: 100%;
+		height: 130px;
+		display: block;
+		background-repeat: no-repeat;
+		-moz-background-size: cover !important;
+		-o-background-size: cover !important;
+		-webkit-background-size: cover !important;
+		background-size: cover !important;
+		background-position: 50% 50% !important;
+
+		// OVERLAY
+		&:before {
+			width: 100%;
+			height: 100%;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba(38,39,41,0.8);
+			@include transition(all 100ms linear);
+		}
+
+		&.current:before {
+			width: 100%;
+			height: 100%;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba(239, 211, 69,0.5);	
+		}
+	}
+
+	.playlist__desc {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 15px;
+		text-align: left;
+		color: #fff; 
+		padding: 0 15px;
+
+		p {
+			line-height: 1.15;
+		}
+
+		p.title {
+			font-size: 16px;
+			font-weight: 500;
+			margin-bottom: 5px;
+		}
+
+		p.small {
+			font-size: 14px;
+			margin: 0;
+		}
+	}
+
+
+	.playlist {
+		height: 130px;
+		position: relative;
+	}
+
+	.flex-direction-nav {
+		width: 100%;
+		height: 40px;
+		position: absolute;
+		top: 50%;
+		margin-top: -20px;
+		z-index: 1;
+
+		a { 
+			height: 40px;
+			color: rgba(38,39,41,0.4);
+
+			&:before { line-height: 40px; }
+
+			&:hover { color: rgba(38,39,41,0.8); }
+		}
+
+		.flex-prev { left: -30px; }
+		.flex-next { right: -30px; }
+	}
+
+	.flex-viewport {
+		z-index: 3;
+	}
+
+	.flex-control-nav { display: none; }
+}
+
+/* MOBILE STYLES
+================================================= */
+@include media(mobile) {
+	.section--videoPlaylist {
+		padding-bottom: 60px;
+
+		.videoPlayer { height: auto; }
+	}
+
+	.videoPlayer__container,
+	.videoPlayer__container iframe,
+	.videoPlayer__container object,
+	.videoPlayer__container embed {
+		height: 200px;
+	}
+
+	li.playlist__video {
+		list-style-type: none;
+		width: 50%;
+		width: calc(50% - 2px);
+		float: left;
+		height: 130px;
+		position: relative;
+		margin-right: 4px;
+		margin-bottom: 4px;
+		cursor: pointer;
+
+		&:nth-of-type(2n+2) {
+			margin-right: 0;
+		}
+	}
+
+	.investigation .playlist {
+		height: auto;
+	}
+}
+
+body.is_tablet {
+	.video__desc--current p {
+		font-size: 13px;
+	}
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 979px) {
+	.video__desc--current p {
+		font-size: 13px;
+	}
+}
