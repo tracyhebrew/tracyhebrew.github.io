@@ -46,7 +46,7 @@
 			<a href="/" class="logo logo-white"></a>
 		</div>
 		<div class="header-right text-right">
-			<a href="/donate.php" class="btn btn-donate active--none"><i class="fa fa-heart-o"></i>Donate</a>
+			<a href="/donate.html" class="btn btn-donate active--none"><i class="fa fa-heart-o"></i>Donate</a>
       <a id="nav-toggle" class="btn btn-toggle active--none">
         <div class="nav-toggle-icon">
           <div class="nav-toggle-icon__lines"></div>
@@ -63,23 +63,23 @@
 					<li id="menu-item-1" class="menu-item"><a href="/">Home</a></li>
 					
 					<li id="menu-item-2" class="menu-item menu-item-has-children">
-						<a href="/about.php">About MFA</a>
+						<a href="/about.html">About MFA</a>
 						
 						<ul class="sub-menu">
-							<li id="menu-item-2_1" class="menu-item"><a href="/about.php#team">The Team</a></li>
-							<li id="menu-item-2_2" class="menu-item"><a href="/about.php#success">Our Success</a></li>
-							<li id="menu-item-2_3" class="menu-item"><a href="/about.php#jobs">Jobs</a></li>
+							<li id="menu-item-2_1" class="menu-item"><a href="/about.html#team">The Team</a></li>
+							<li id="menu-item-2_2" class="menu-item"><a href="/about.html#success">Our Success</a></li>
+							<li id="menu-item-2_3" class="menu-item"><a href="/about.html#jobs">Jobs</a></li>
 							<li id="menu-item-2_4" class="menu-item"><a href="">Contact Us</a></li>
 						</ul>
 					</li>
 					
-					<li id="menu-item-3" class="menu-item"><a href="/the-problem.php">The Problem</a></li>
+					<li id="menu-item-3" class="menu-item"><a href="/the-problem.html">The Problem</a></li>
 					
 					<li id="menu-item-4" class="menu-item menu-item-has-children">
 						<a href="">What We Do</a>
 						
 						<ul class="sub-menu">
-							<li id="menu-item-4_1" class="menu-item"><a href="/investigations.php">Undercover Investigations</a></li>
+							<li id="menu-item-4_1" class="menu-item"><a href="/investigations.html">Undercover Investigations</a></li>
 							<li id="menu-item-4_2" class="menu-item"><a href="">Corporate Outreach</a></li>
 							<li id="menu-item-4_3" class="menu-item"><a href="">Legal Advocacy</a></li>
 							<li id="menu-item-4_4" class="menu-item"><a href="">Education</a></li>
@@ -87,19 +87,19 @@
 					</li>
 					
 					<li id="menu-item-5" class="menu-item menu-item-has-children">
-						<a href="/get-involved.php">Get Involved</a>
+						<a href="/get-involved.html">Get Involved</a>
 						
 						<ul class="sub-menu">
-							<li id="menu-item-5_1" class="menu-item"><a href="/get-involved.php#actioncenter">Action Center</a></li>
+							<li id="menu-item-5_1" class="menu-item"><a href="/get-involved.html#actioncenter">Action Center</a></li>
 						</ul>
 					</li>
 					
 				</ul>
 				
 				<ul id="menu-secondary" class="menu-secondary">
-					<li id="menu-item-6" class="menu-item"><a href="/shop.php">Shop</a></li>
-					<li id="menu-item-7" class="menu-item"><a href="/blog.php">Blog</a></li>
-					<li id="menu-item-8" class="menu-item"><a href="/donate.php">Donate</a></li>
+					<li id="menu-item-6" class="menu-item"><a href="/shop.html">Shop</a></li>
+					<li id="menu-item-7" class="menu-item"><a href="/blog.html">Blog</a></li>
+					<li id="menu-item-8" class="menu-item"><a href="/donate.html">Donate</a></li>
 				</ul>
 			</div>
 
@@ -113,7 +113,32 @@
 		</div>
 	</nav>
 
-	<?php include('partials/sidebar-cart.php'); ?>
+	<div id="sidebarcart">
+		<div class="cart__body">
+			<div class="cart__header">
+				<i class="fa fa-shopping-cart"></i>
+				<hr>
+			</div>
+			
+			<div class="cart__item">
+				<div class="span2 item-thumbnail" style="background-image:url(/assets/images/merch/merch01.jpg);"></div>
+				<div class="span10 item-desc">
+					<p class="item-name">Don't Eat My Peeps</p>
+					<p class="item-size">Small</p>
+					<form action="">
+						<input class="item-quantity" type="number" min="0" value="1"> x <span class="item-price">$25.00</span>
+					</form>
+					<a id="delete"><i class="fa fa-times"></i></a>
+					<a id="edit"><i class="fa fa-edit"></i></a>
+				</div>
+			</div>
+
+			<div class="cart__footer text-center">
+				<a href="" id="continue-shopping" class="btn btn--yellow">Continue Shopping</a>
+				<a href="" id="checkout" class="btn btn--primary">Checkout</a>
+			</div>
+		</div>
+	</div>
 
 	<div id="inject--wrap" class="">
   	<div id="inject" class="">

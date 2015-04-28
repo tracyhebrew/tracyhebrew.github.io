@@ -370,7 +370,9 @@ hr.divide--dark  { background: #d4d4d4; }
 		height: 75px;
 		position: absolute;
 		top: 50%;
-		margin-top: -37.5px;
+		-webkit-transform: translateY(-50%);
+		   	-ms-transform: translateY(-50%);
+		        transform: translateY(-50%);
 		background: #fff;
 		background: rgba(255,255,255,.5);
 		line-height: 75px;

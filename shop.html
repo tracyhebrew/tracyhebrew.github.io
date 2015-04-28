@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><html class="no-js ie"><![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- JS Hooks -->
+  <script> var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false ); </script>
+
+  <script type="text/javascript" src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+  <!--[if lt IE 10]> <script type="text/javascript" src="assets/js/xbc.js"></script> <![endif]-->
+  
+  <script>
+    // Google Analytics here
+  </script>
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  
+  <div id="wrap">
+    
+  <section id="header" class="cart--stick">
+    <div class="header-left brand span6">
+      <a href="/" class="logo logo-white"></a>
+    </div>
+    <div class="header-right text-right">
+      <a href="/donate.html" class="btn btn-donate active--none"><i class="fa fa-heart-o"></i>Donate</a>
+      <a id="nav-toggle" class="btn btn-toggle active--none">
+        <div class="nav-toggle-icon">
+          <div class="nav-toggle-icon__lines"></div>
+        </div>
+      </a>
+      <a id="cart-toggle" class="cart-toggle btn active--none"></a>
+    </div>
+  </section>
+
+  <nav id="nav">
+    <div class="nav__body">
+      <div class="nav__inner">
+        <ul id="menu-main" class="menu-main">
+          <li id="menu-item-1" class="menu-item"><a href="/">Home</a></li>
+          
+          <li id="menu-item-2" class="menu-item menu-item-has-children">
+            <a href="/about.html">About MFA</a>
+            
+            <ul class="sub-menu">
+              <li id="menu-item-2_1" class="menu-item"><a href="/about.html#team">The Team</a></li>
+              <li id="menu-item-2_2" class="menu-item"><a href="/about.html#success">Our Success</a></li>
+              <li id="menu-item-2_3" class="menu-item"><a href="/about.html#jobs">Jobs</a></li>
+              <li id="menu-item-2_4" class="menu-item"><a href="">Contact Us</a></li>
+            </ul>
+          </li>
+          
+          <li id="menu-item-3" class="menu-item"><a href="/the-problem.html">The Problem</a></li>
+          
+          <li id="menu-item-4" class="menu-item menu-item-has-children">
+            <a href="">What We Do</a>
+            
+            <ul class="sub-menu">
+              <li id="menu-item-4_1" class="menu-item"><a href="/investigations.html">Undercover Investigations</a></li>
+              <li id="menu-item-4_2" class="menu-item"><a href="">Corporate Outreach</a></li>
+              <li id="menu-item-4_3" class="menu-item"><a href="">Legal Advocacy</a></li>
+              <li id="menu-item-4_4" class="menu-item"><a href="">Education</a></li>
+            </ul>
+          </li>
+          
+          <li id="menu-item-5" class="menu-item menu-item-has-children">
+            <a href="/get-involved.html">Get Involved</a>
+            
+            <ul class="sub-menu">
+              <li id="menu-item-5_1" class="menu-item"><a href="/get-involved.html#actioncenter">Action Center</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        
+        <ul id="menu-secondary" class="menu-secondary">
+          <li id="menu-item-6" class="menu-item"><a href="/shop.html">Shop</a></li>
+          <li id="menu-item-7" class="menu-item"><a href="/blog.html">Blog</a></li>
+          <li id="menu-item-8" class="menu-item"><a href="/donate.html">Donate</a></li>
+        </ul>
+      </div>
+
+      <ul class="menu--social">
+        <li><a href="" class="btn btn--social"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="" class="btn btn--social"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="" class="btn btn--social"><i class="fa fa-tumblr"></i></a></li>
+        <li><a href="" class="btn btn--social"><i class="fa fa-youtube-play"></i></a></li>
+        <li><a href="" class="btn btn--social"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="sidebarcart">
+    <div class="cart__body">
+      <div class="cart__header">
+        <i class="fa fa-shopping-cart"></i>
+        <hr>
+      </div>
+      
+      <div class="cart__item">
+        <div class="span2 item-thumbnail" style="background-image:url(/assets/images/merch/merch01.jpg);"></div>
+        <div class="span10 item-desc">
+          <p class="item-name">Don't Eat My Peeps</p>
+          <p class="item-size">Small</p>
+          <form action="">
+            <input class="item-quantity" type="number" min="0" value="1"> x <span class="item-price">$25.00</span>
+          </form>
+          <a id="delete"><i class="fa fa-times"></i></a>
+          <a id="edit"><i class="fa fa-edit"></i></a>
+        </div>
+      </div>
+
+      <div class="cart__footer text-center">
+        <a href="" id="continue-shopping" class="btn btn--yellow">Continue Shopping</a>
+        <a href="" id="checkout" class="btn btn--primary">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="inject--wrap" class="">
+    <div id="inject" class="">
+      <div class="inject__overlay"></div>
+        <div id="main" class="store">
+          
+        	<!-- ==================== -->
+        	<!--         HERO         -->
+        	<!-- ==================== -->
+         	<section id="hero" class="hero--merch" style="background-image: url(/assets/images/hero-merch.jpg);">
+           
+         	</section>
+
+          <!-- ==================== -->
+          <!--       PRODUCTS       -->
+          <!-- ==================== -->
+          <section class="section--products section--medium pt0">
+            <div id="product-filter" class="container--full text-center">
+              <a class="span4 product-type selected isotope-filter" data-filter="">
+                <h3>All Products</h3>
+              </a>
+              <a class="span4 product-type isotope-filter" data-filter=".type-merch">
+                <h3>Merchandise</h3>
+              </a>
+              <a class="span4 product-type isotope-filter" data-filter=".type-lit">
+                <h3>Literature</h3>
+              </a>
+            </div>
+
+            <div id="product-tiles" class="container">
+              <!-- ROW 1 -->
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch01.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch01.jpg);"></li>
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch-alt.jpg);"></li>
+                    </ul>
+                  </div>
+
+                  <div class="product-desc span8">
+                    <h3>'Don't Eat My Peeps' T</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Chicks are friends, not food! Stand up for your peeps with a cute, costumed chicks T.</p>
+                   
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <input type="hidden" name="productid" value="1">
+                      <ul class="item-options">
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Women's t-shirts are available in lime on 100% fine jersey cotton, sizes S-XXL.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch02.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch02.jpg);"></li>
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch-alt.jpg);"></li>
+                    </ul>
+                  </div>            <div class="product-desc span8">
+                    <h3>'Why Love One?' T</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+
+                    <p>This adorable, pro-veg T-shirt featuring a playful puppy and cuddly cow poses the question "Why love one but eat the other?"</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                    
+                    <p class="details--small">Designed by artist <a href="">Lisa Revelli</a>.</p>
+                    <p class="details--small">Printed on American Apparel, women's cut T-shirts on a supersoft tri-blend, sizes S-XL.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch03.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch03.jpg);"></li>
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch-alt.jpg);"></li>
+                    </ul>
+                  </div>            <div class="product-desc span8">
+                    <h3>'Animal Lib' T</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Be a fierce force for animals with our vintage inspired, proud chicken T.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Unisex t-shirts are available in oatmeal on super soft tri-blend, sizes XS-XXL.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch04.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch04.jpg);"></li>
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch-alt.jpg);"></li>
+                    </ul>
+                  </div>
+                    <div class="product-desc span8">
+                      <h3>'Don't Bully Bulls' T</h3>
+                      <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                      <p>Be a hero for bulls! Speak out against injustice with our cool, new graphic T.</p>
+                    
+                      <form action="" class="form--order">
+                        <input type="hidden" value="">
+                        <ul class="item-options">
+                          <li>
+                            <input id="small" type="radio" value="S" name="size" />
+                            <label for="small">S</label>
+                          </li>
+                          <li>
+                            <input id="medium" type="radio" value="M" name="size" />
+                            <label for="medium">M</label>
+                          </li>
+                          <li>
+                            <input id="large" type="radio" value="L" name="size" />
+                            <label for="large">L</label>
+                          </li>
+                          <li>
+                            <input id="xlarge" type="radio" value="XL" name="size" />
+                            <label for="xlarge">XL</label>
+                          </li>
+                          <li>
+                            <input id="xxlarge" type="radio" value="XXL" name="size" />
+                            <label for="xxlarge">XXL</label>
+                          </li>
+                        </ul>
+
+                        <div class="cart-btn">
+                          <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                        </div>
+                      </form>
+
+                      <p class="details--small">Women's t-shirts are available in ash gray on 100% fine jersey cotton, sizes S-XXL.</p>
+                      <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                    </div>
+                </div>
+              </div>
+
+              <!-- ROW 2 -->
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch05.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">   
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch05.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Free to Be' T</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Celebrate freedom for all animals. Turn your swag up with our limited-edition T featuring a shimmying chick.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Unisex t-shirts are available in athletic grey on super soft tri-blend, sizes XS-XXL.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch06.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch06.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Cultivate Kindness' T</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Put your inner peace on display with our yoga-inspired T bearing an enlightening message in a henna-style print</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                    
+                    <p class="details--small">Women's t-shirts are available in onyx on super soft tri-blend, sizes S-XXL</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch07.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch07.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Compassion' T - Blue Chicken</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Be a fierce force for animals with our vintage inspired, proud chicken T.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Unisex t-shirts are available in heather grey in super soft tri-blend, sizes XS-XXL.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch08.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch08.jpg);"></li>
+                    </ul>
+                  </div>  
+                  <div class="product-desc span8">
+                    <h3>'Compassion' T - Pink Piglet</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Be a hero for bulls! Speak out against injustice with our cool, new graphic T.</p>
+                  
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Inspire others to widen their circle of compassion to include all animals with our playful pig T.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 3 -->
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch09.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch09.jpg);"></li>
+                    </ul>
+                  </div>            <div class="product-desc span8">
+                    <h3>'Not Cool' T</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>This wildly popular pro-vegetarian hipster T features the etchings of the human rib cage, a dotted line illuminating the stomach, and a swallowed baby chick-with-attitude declaring "Not Cool." A larger chick rests on the back bottom corner of the T who concludes "Go Vegetarian!" The left sleeve bares the MFA logo.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Printed on a sweatshop-free American Apparel 50/25/25 shirt (50% Polyester, 25% Cotton, & 25% Rayon), this super soft, super hip T could easily become the most beloved item in your closet.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch10.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p class="sale"><span class="strikethrough">$25</span>  <span class="label">On Sale</span>$20</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch10.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Ask Me Why' Womens T</h3>
+                    <p class="price"><span class="strikethrough">$25</span> sale $20 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Start the conversation about the benefits of a veggie diet with this new MFA T. Printed on American Apparel, this adorable T features a lovable cow with the phrase, "Ask Me Why I'm Vegetarian."</p>
+                    
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                    
+                    <p class="details--small">Women's shirts are available in fuchsia on 100% fine jersey cotton, sizes S-XXL.</p>
+                    <p class="details--small">Looking for a quick and thorough way to answer the question? Check out MFA's <a href="">FRESH brochure</a> to hand out to anyone who is curious.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch11.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p class="sale"><span class="strikethrough">$25</span>  <span class="label">On Sale</span>$20</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch11.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Ask Me Why' Mens T</h3>
+                    <p class="price"><span class="strikethrough">$25</span> sale $20 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Start the conversation about the benefits of a veggie diet with this new MFA T. Printed on American Apparel, this adorable T features a lovable cow with the phrase, "Ask Me Why I'm Vegetarian."</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Men's shirts are available in heather lake blue on 50/50 cotton/polyester, sizes XS-XXL.</p>
+                    <p class="details--small">Looking for a quick and thorough way to answer the question? Check out MFA's <a href="">FRESH brochure</a> to hand out to anyone who is curious.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch12.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$25</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch12.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Beef Cuts' T</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Parodying the classic Beef Cuts diagram used by butchers, this edgy new T gives a brutally honest look at what's truly for dinner.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Printed on 100% cotton American Apparel t-shirt.</p>
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 4 -->
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch13.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$20</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch13.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>Classic T</h3>
+                    <p class="price">$25 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Show your support for animal liberation with MFA's classic logo T printed on American Apparel 100% sweatshop-free garments.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch14.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$20</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch14.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>Girls Baby Cap T</h3>
+                    <p class="price">$20 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Show your support for animal liberation with MFA's baby cap logo T printed on American Apparel 100% sweatshop-free garments.</p>  
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                    
+                    <p class="details--small">Please click <a href="" target="_blank">here</a> for the sizing chart.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile type-merch" style="background-image: url(/assets/images/merch/merch15.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$35</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch15.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>Hoodie</h3>
+                    <p class="price">$35 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>This popular item features MFA's logo on the front of a 50/50 cotton/polyester hooded sweatshirt.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options">
+                        <li>
+                          <input id="xmall" type="radio" value="XS" name="size" />
+                          <label for="xmall">XS</label>
+                        </li>
+                        <li>
+                          <input id="small" type="radio" value="S" name="size" />
+                          <label for="small">S</label>
+                        </li>
+                        <li>
+                          <input id="medium" type="radio" value="M" name="size" />
+                          <label for="medium">M</label>
+                        </li>
+                        <li>
+                          <input id="large" type="radio" value="L" name="size" />
+                          <label for="large">L</label>
+                        </li>
+                        <li>
+                          <input id="xlarge" type="radio" value="XL" name="size" />
+                          <label for="xlarge">XL</label>
+                        </li>
+                        <li>
+                          <input id="xxlarge" type="radio" value="XXL" name="size" />
+                          <label for="xxlarge">XXL</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch16.jpg);">
+                <div class="tile__hover">
+                  <div class="inner">
+                    <a href="" class="btn--merch view ml10">View</a>
+                    <a href="" class="btn--merch cart cart-disabled ml10">Add to Cart</a>
+                    <p>$10</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch16.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'I Heart MFA' Stickers (pack of 10)</h3>
+                    <p class="price">$10 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Show your support for Mercy For Animals with your very own "I Heart MFA" sticker. Perfect to stick on your bike, water bottle, notebook, laptop, or almost anywhere else! 2" x 6"</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn disabled">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart" disabled>
+                      </div>
+                    </form>            
+                  </div>
+                </div>
+              </div>
+
+            
+              <!-- ROW 5 -->
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch17.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$10</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch17.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>MFA Holiday Cards (pack of 10)</h3>
+                    <p class="price">$15 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Spread some holiday cheer this year with our MFA holiday card, featuring Emily, Kristen, and Ellen - three lucky ducklings who were rescued from certain death and a miserable existence on a foie gras factory farm by a Mercy For Animals undercover investigator.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">Cards are 5x7 inches.</p>
+                    <p class="details--small">They are blank inside for you to personalize your season's greeting. Your friends and family will love reading the lucky ducklings' story, which is printed on the back. Envelopes are included.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch18.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$20</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch18.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>Walmart Cruelty Stickers (pack of 10)</h3>
+                    <p class="price">$10 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Walmart Cruelty Stickers (Pack of 10)</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                    
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch19.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$15-75</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch19.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>Farm to Fridge DVDs</h3>
+                    <p class="price">$15-75 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Narrated by Oscar-nominee James Cromwell, this powerful 12-minute film takes you on an eye-opening exploration behind the closed doors of the nation's largest industrial poultry, pig, dairy and fish farms, hatcheries, and slaughter plants — revealing the often-unseen journey that animals make from Farm to Fridge.</p>
+                    <p>Watch the video online at <a href="">www.MeatVideo.com</a>.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options item-options--larger">
+                        <li>
+                          <input id="dvds10" type="radio" value="15" name="dvds" />
+                          <label for="dvds10">10 DVDs - $15</label>
+                        </li>
+                        <li>
+                          <input id="dvds50" type="radio" value="50" name="dvds" />
+                          <label for="dvds50">50 DVDs - $50</label>
+                        </li>
+                        <li>
+                          <input id="dvds100" type="radio" value="75" name="dvds" />
+                          <label for="dvds100">100 DVDs - $75</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch20.jpg);">
+                <div class="tile__hover">
+                  <div class="inner">
+                    <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                    <a href="" class="btn--merch view ml10">View</a>
+                    <p class="sale"><span class="strikethrough">$10</span>  <span class="label">On Sale</span>$7</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch20.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>Fowl Play DVD</h3>
+                    <p class="price"><span class="strikethrough">$10</span> sale $7 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>MFA's new, award-winning documentary featuring footage from the country's largest egg facilities, as well as interviews with animal rescuers, undercover investigators, and animal care professionals.</p>
+                    <p><a href="">Click here</a> to watch select scenes from the film.</p>
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 6 -->
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch21.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$4</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch21.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'How Much Cruelty ... ?' Poster</h3>
+                    <p class="price">$4 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Perfect for educational displays, protests, outreach exhibits, or to hang at home, school, or work, this new poster serves some serious food for thought. 18" x 24"</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch22.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$20</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch22.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Boycott Animal Abuse' Poster</h3>
+                    <p class="price">$4 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Perfect for educational displays, protests, outreach exhibits, or to hang at home, school, or work, this new poster serves some serious food for thought. 18" x 24"</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                    
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch23.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$15-75</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch23.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Why Love One ... ?' Poster (Dog and Pig)</h3>
+                    <p class="price">$4 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Perfect for educational displays, protests, outreach exhibits, or to hang at home, school, or work, this new poster serves some serious food for thought. 18" x 24"</p>
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch24.jpg);">
+                <div class="tile__hover">
+                  <div class="inner">
+                    <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                    <a href="" class="btn--merch view ml10">View</a>
+
+                    <p>$4</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch24.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Why Love One ... ?' Poster (Cat and Chick)</h3>
+                    <p class="price">$4 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Perfect for educational displays, protests, outreach exhibits, or to hang at home, school, or work, this new poster serves some serious food for thought. 18" x 24"</p>
+                    <p><a href="">Click here</a> to watch select scenes from the film.</p>
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 7 -->
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch25.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$4-$35</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch25.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>FRESH Booklets</h3>
+                    <p class="price">$4-$35 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>This stylish and thought-provoking eight-page booklet exposes the cruelty of factory farms and shares helpful tips on making the switch to a plant-based diet</p>
+                    <p><a href="">Click here</a> to view the PDF version of the brochure.</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <ul class="item-options item-options--larger">
+                        <li>
+                          <input id="packet100" type="radio" value="4" name="packets" />
+                          <label for="packet100">100 Packets - $4</label>
+                        </li>
+                        <li>
+                          <input id="packet200" type="radio" value="50" name="packets" />
+                          <label for="packet200">200 Packets - $7</label>
+                        </li>
+                        <li>
+                          <input id="packet500" type="radio" value="75" name="packets" />
+                          <label for="packet500">Half Box (500 Packets) - $18</label>
+                        </li>
+                        <li>
+                          <input id="packet1000" type="radio" value="75" name="packets" />
+                          <label for="packet1000">Full Box (1000 Packets) - $35</label>
+                        </li>
+                      </ul>
+
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch26.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$20</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch26.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Boycott Animal Abuse' Poster</h3>
+                    <p class="price">$4 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Perfect for educational displays, protests, outreach exhibits, or to hang at home, school, or work, this new poster serves some serious food for thought. 18" x 24"</p>
+
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                    
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch27.jpg);">
+                <div class="tile__hover">
+                  <a href="" class="btn--merch view ml10">View</a>
+                  <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                  <div class="inner">
+                    <p>$15-75</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch27.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Why Love One ... ?' Poster (Dog and Pig)</h3>
+                    <p class="price">$4 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Perfect for educational displays, protests, outreach exhibits, or to hang at home, school, or work, this new poster serves some serious food for thought. 18" x 24"</p>
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile tile--alt type-lit" style="background-image: url(/assets/images/merch/merch28.jpg);">
+                <div class="tile__hover">
+                  <div class="inner">
+                    <a href="" class="btn--merch cart ml10">Add to Cart</a>
+                    <a href="" class="btn--merch view ml10">View</a>
+                    <p>$4</p>
+                  </div>
+                </div>
+                <div class="tile__expand">
+                  <div class="product-photos">
+                    <ul class="slides">
+                      <li class="slide" style="background-image: url(/assets/images/merch/merch28.jpg);"></li>
+                    </ul>
+                  </div>
+                  <div class="product-desc span8">
+                    <h3>'Why Love One ... ?' Poster (Cat and Chick)</h3>
+                    <p class="price">$4 <span class="sh">+ Shipping &amp; Handling</span></p>
+                    <p>Perfect for educational displays, protests, outreach exhibits, or to hang at home, school, or work, this new poster serves some serious food for thought. 18" x 24"</p>
+                    <p><a href="">Click here</a> to watch select scenes from the film.</p>
+                    <form action="" class="form--order">
+                      <input type="hidden" value="">
+                      <div class="cart-btn">
+                        <input type="submit" href="" class="btn btn--primary cart" value="Add To Cart">
+                      </div>
+                    </form>
+                    <p class="details--small">(Suggested contribution, this is not tax deductible.)</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- #product-tiles.container -->
+          </section>
+
+          <section class="store__footer section--large pt0">
+            <div class="container">
+              <a href="">Shipping, Returns &amp; Exchange Policy</a>
+            </div>   
+          </section>
+
+
+
+        </div> <!-- #main -->
+    
+        <!-- ==================== -->
+        <!--        FOOTER        -->
+        <!-- ==================== -->
+        <footer class="footer--social">
+          <div class="container-full">
+            <a class="logo logo-color" href="/"></a>
+            <ul class="menu--social">
+              <li><a href="https://www.facebook.com/mercyforanimals" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/MercyForAnimals" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="http://mercyforanimals.tumblr.com/" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+              <li><a href="https://www.youtube.com/user/mercyforanimals" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+              <li><a href="http://instagram.com/mercyforanimals" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </footer>
+
+        <footer class="footer--contact">
+          <div class="container text-center">
+            <p><a href="http://www.google.com/maps/place/8033+Sunset+Blvd+%23864,+Los+Angeles,+CA+90046/@34.0981741,-118.3646913,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2bec1ed06229d:0x801744e2608e7077" target="_blank">8033 SUNSET BLVD, SUITE 864 <br class="mobile-only"><span>|</span> LOS ANGELES, CA 90046</a> <span>|</span> <a href="">866-632-6446</a> <span>|</span> <a href="">CONTACT US</a></p>
+          </div>
+        </footer>
+
+      </div>
+    </div><!-- #inject-wrap -->
+
+    <!-- 
+    **************************** 
+              MODAL BAY
+    ****************************
+    -->
+    <div id="modals">
+      <!-- LIKE US ON FACEBOOK -->
+      <div id="fb-like" class="modal modal--small">
+        <i class="modal-close fa fa-times"></i>
+        <div class="modal-content">
+          <iframe name="f65b07774" width="100" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FQjK2hWv6uak.js%3Fversion%3D41%23cb%3Df10d7ce5c8%26domain%3Dmfa.dev%26origin%3Dhttp%253A%252F%252Fmfa.dev%252Ff3d40ec2d4%26relation%3Dparent.parent&amp;color_scheme=light&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fmercyforanimals&amp;locale=en_US&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false" style="border: none; visibility: visible; width: 275px; height: 221px;" class=""></iframe>   
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- Javascript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="assets/js/vendor/jquery.flexslider.min.js"></script>
+<script src="assets/js/vendor/slick.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/vendor/wow.min.js"></script>
+<script src="assets/js/vendor/skrollr.min.js"></script>
+<script src="assets/js/vendor/jquery.isotope.js"></script>
+<script src="assets/js/vendor/jquery.isotope.packery.js"></script>
+<script src="assets/js/app.js"></script>

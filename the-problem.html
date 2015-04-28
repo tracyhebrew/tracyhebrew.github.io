@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><html class="no-js ie"><![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Title</title>
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="assets/css/style.css?v=2">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="114x114">
+	<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="72x72">
+	<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+	<!-- JS Hooks -->
+	<script> var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false ); </script>
+
+	<script type="text/javascript" src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+	<!--[if lt IE 10]> <script type="text/javascript" src="assets/js/xbc.js"></script> <![endif]-->
+	
+	<script>
+		// Google Analytics here
+	</script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	<div id="wrap">
+		
+	<section id="header" class="cart--stick">
+		<div class="header-left brand span6">
+			<a href="/" class="logo logo-white"></a>
+		</div>
+		<div class="header-right text-right">
+			<a href="/donate.html" class="btn btn-donate active--none"><i class="fa fa-heart-o"></i>Donate</a>
+      <a id="nav-toggle" class="btn btn-toggle active--none">
+        <div class="nav-toggle-icon">
+          <div class="nav-toggle-icon__lines"></div>
+        </div>
+      </a>
+      <a id="cart-toggle" class="cart-toggle btn active--none"></a>
+    </div>
+	</section>
+
+	<nav id="nav">
+		<div class="nav__body">
+			<div class="nav__inner">
+				<ul id="menu-main" class="menu-main">
+					<li id="menu-item-1" class="menu-item"><a href="/">Home</a></li>
+					
+					<li id="menu-item-2" class="menu-item menu-item-has-children">
+						<a href="/about.html">About MFA</a>
+						
+						<ul class="sub-menu">
+							<li id="menu-item-2_1" class="menu-item"><a href="/about.html#team">The Team</a></li>
+							<li id="menu-item-2_2" class="menu-item"><a href="/about.html#success">Our Success</a></li>
+							<li id="menu-item-2_3" class="menu-item"><a href="/about.html#jobs">Jobs</a></li>
+							<li id="menu-item-2_4" class="menu-item"><a href="">Contact Us</a></li>
+						</ul>
+					</li>
+					
+					<li id="menu-item-3" class="menu-item"><a href="/the-problem.html">The Problem</a></li>
+					
+					<li id="menu-item-4" class="menu-item menu-item-has-children">
+						<a href="">What We Do</a>
+						
+						<ul class="sub-menu">
+							<li id="menu-item-4_1" class="menu-item"><a href="/investigations.html">Undercover Investigations</a></li>
+							<li id="menu-item-4_2" class="menu-item"><a href="">Corporate Outreach</a></li>
+							<li id="menu-item-4_3" class="menu-item"><a href="">Legal Advocacy</a></li>
+							<li id="menu-item-4_4" class="menu-item"><a href="">Education</a></li>
+						</ul>
+					</li>
+					
+					<li id="menu-item-5" class="menu-item menu-item-has-children">
+						<a href="/get-involved.html">Get Involved</a>
+						
+						<ul class="sub-menu">
+							<li id="menu-item-5_1" class="menu-item"><a href="/get-involved.html#actioncenter">Action Center</a></li>
+						</ul>
+					</li>
+					
+				</ul>
+				
+				<ul id="menu-secondary" class="menu-secondary">
+					<li id="menu-item-6" class="menu-item"><a href="/shop.html">Shop</a></li>
+					<li id="menu-item-7" class="menu-item"><a href="/blog.html">Blog</a></li>
+					<li id="menu-item-8" class="menu-item"><a href="/donate.html">Donate</a></li>
+				</ul>
+			</div>
+
+			<ul class="menu--social">
+				<li><a href="" class="btn btn--social"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="" class="btn btn--social"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="" class="btn btn--social"><i class="fa fa-tumblr"></i></a></li>
+				<li><a href="" class="btn btn--social"><i class="fa fa-youtube-play"></i></a></li>
+				<li><a href="" class="btn btn--social"><i class="fa fa-instagram"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="sidebarcart">
+		<div class="cart__body">
+			<div class="cart__header">
+				<i class="fa fa-shopping-cart"></i>
+				<hr>
+			</div>
+			
+			<div class="cart__item">
+				<div class="span2 item-thumbnail" style="background-image:url(/assets/images/merch/merch01.jpg);"></div>
+				<div class="span10 item-desc">
+					<p class="item-name">Don't Eat My Peeps</p>
+					<p class="item-size">Small</p>
+					<form action="">
+						<input class="item-quantity" type="number" min="0" value="1"> x <span class="item-price">$25.00</span>
+					</form>
+					<a id="delete"><i class="fa fa-times"></i></a>
+					<a id="edit"><i class="fa fa-edit"></i></a>
+				</div>
+			</div>
+
+			<div class="cart__footer text-center">
+				<a href="" id="continue-shopping" class="btn btn--yellow">Continue Shopping</a>
+				<a href="" id="checkout" class="btn btn--primary">Checkout</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="inject--wrap" class="">
+  	<div id="inject" class="">
+    	<div class="inject__overlay"></div>
+
+			<div id="main" class="default">
+				
+				<!-- ==================== -->
+				<!--         HERO         -->
+				<!-- ==================== -->
+				<section id="hero" class="hero--parallax hero--problem hero--video" data-video-service="youtube" data-video-id="y9wvWRthCIE">
+				 	<div class="parallax__bg hero__inner"
+				   data-center="background-position: 50% 0px;"
+				   data-top-bottom="background-position: 50% -100px;"
+				   data-anchor-target="#hero"
+				 	>
+				   	<div class="parallax__container">
+				     	<div class="parallax__content"
+				       data-top="opacity: 0.5"
+				       data-100-top="opacity: 1"
+				       data-anchor-target="h1"
+				     	>
+					      <a href="" class="hero--video__play blue"><i class="fa fa-play"></i> </a>
+					      <h1>The Problem</h1>
+					      <h5>Animals suffer miserably on modern farms. <br>Mercy For Animals Works to expose and end that abuse.</h5>
+				     	</div>
+				   	</div>
+				 	</div>
+				 	<a href="" id="hero--video__close"><i class="fa fa-times"></i> close</a>
+				</section>
+
+				<!-- ==================== -->
+				<!--     INTERSTITIAL     -->
+				<!-- ==================== -->
+				<section class="interstitial section--large interstitial--circle">
+					<div class="container">
+						<div class="circle circle--xlrg" style="background-image:url(/assets/images/circlelrg-factory.jpg);"></div>
+						<div class="circle-descrip">
+							<div class="inner">
+								<h3 class="mb30">Factory Farming: Hell on Earth</h3>
+								<p class="text-gray">Pigs, cows, chickens, fish and other animals raised for food suffer miserably on modern farms. Animal cruelty laws that protect dogs and cats specifically exclude farmed animals from most protection. As a result, blatant abuse is now standard practice on farms both large and small.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<!-- ==================== -->
+				<!--  SIGN THE PETITION   -->
+				<!-- ==================== -->
+				<section class="section--large newsletter-signup bg-gray">
+					<div class="container text-center">
+						<h4 class="mb20"><span class="icon-check inline baseline mr10"></span>Sign the Petition</h4>
+						<h6 class="mb20 text-gray">McDonald’s buys eggs from hens packed in tiny wire cages so small they can’t spread their wings.<br>Sign the petition now demanding that McDonald’s end this cruel practice.</h6>
+						
+						<form method="" id="" action="" class="form--signup extended-fields">
+						  <div class="fieldset name fieldset--withicon">
+						  	<input name="name_first" id="name_first" type="text" class="" tabindex="1" placeholder="First" onchange="this.className=(this.value=='')?'':'visited';">
+						  	<label class="gfield_label" for=""><i class="fa fa-user"></i></label>
+						  	<input name="name_last" id="name_last" type="text" class="" tabindex="1" placeholder="Last" onchange="this.className=(this.value=='')?'':'visited';">
+						  </div>
+
+							<div class="fieldset email fieldset--withicon">
+								<input name="user_email" id="" type="text" class="" tabindex="2" placeholder="Email Address" onchange="this.className=(this.value=='')?'':'visited';">
+								<label class="gfield_label" for="input_1_2"><i class="fa fa-envelope-o"></i></label>
+							</div>
+
+						<!-- 	<div class="fieldset zipcode fieldset--withicon">
+								<input name="user_zipcode" id="" type="text" class="" tabindex="3" placeholder="Zip Code" onchange="this.className=(this.value=='')?'':'visited';">
+								<label class="gfield_label" for="input_1_3"><i class="fa fa-home"></i></label>
+							</div> -->
+
+							<div class="fieldset address span12 fieldset--withicon">
+								<input name="user_address" id="address" type="text" class="" tabindex="3" placeholder="Street Address" onchange="this.className=(this.value=='')?'':'visited';">
+								<label class="" for="input_1_3"><i class="fa fa-home"></i></label>
+								<input name="user_city" id="city" type="text" class="" tabindex="4" placeholder="City" onchange="this.className=(this.value=='')?'':'visited';">
+
+								<input name="user_state" id="state" type="text" class="" tabindex="5" placeholder="State" onchange="this.className=(this.value=='')?'':'visited';">
+								<input name="user_zipcode" id="zipcode" type="text" class="" tabindex="5" placeholder="Zipcode" onchange="this.className=(this.value=='')?'':'visited';">
+								<select name="user_country" id="country">
+									<option value="country">Country</option>
+								  <option value="unitedstates">United States</option>
+								  <option value="canada">Canada</option>
+								  <option value="mexico">Mexico</option>
+								  <option value="panama">Audi</option>
+								</select>
+							</div>
+								
+
+							<div class="fieldset checkbox align-center">
+								<input type="checkbox" name="checkbox" id="checkbox_id" value="value">
+								<label for="checkbox_id">Yes, I want to receive emails from Mercy For Animals</label>
+							</div>
+
+							<div class="span12 mt10">
+							  <input class="btn btn--primary" type="submit" tabindex="4" value="Submit">
+							</div>
+			      </form>
+					</div>
+				</section>
+
+				<!-- ==================== -->
+				<!--     LIFE OF PAIN     -->
+				<!-- ==================== -->
+				<section class="tiles section pb0 tiles--static">
+					<div class="container--full">
+						<h3 class="text-center">A Life of Pain</h3>
+						<h6 class="mb50 text-center text-gray">With little to no legal protection from sickening cruelty, farmed animals are subjected to <br>routine abuses during their short lives on factory farms and slaughterhouses</h6>
+
+						<div class="tiles__box half" style="background-image: url(/assets/images/tile-pain01.jpg);">
+							<div class="tiles__details--black">
+								<h5>Intensely<br>Confined</h5>
+								<p>Farmed animals are crammed by the thousands into dark, waste-filled sheds. Many spend their entire lives locked in cages so small they can barely turn around.</p>
+							</div>
+						</div>
+					
+						<div class="tiles__box half" style="background-image: url(/assets/images/tile-pain02.jpg);">
+							<div class="tiles__details--black">
+								<h5>Mutilated</h5>
+								<p>Animals have their tails cut off, teeth clipped out, and beaks and horns seared off with a hot metal blade. Males have their testicles cut off without anesthesia.</p>
+							</div>
+						</div>
+					
+						<div class="tiles__box half" style="background-image: url(/assets/images/tile-pain03.jpg);">
+							<div class="tiles__details--black right">
+								<h5>Abused</h5>
+								<p>Workers often punch, kick and whip sick and injured animals to move them around farm sheds</p>
+							</div>
+						</div>
+					
+						<div class="tiles__box half" style="background-image: url(/assets/images/tile-pain04.jpg);">
+							<div class="tiles__details--black right">
+								<h5>Genetically Manipulated</h5>
+								<p>Animals are artificially bred to grow so fat so quickly they often suffer crippling leg problems and heart attacks at just a few months of age.</p>
+							</div>
+						</div>
+					
+						<div class="tiles__box half" style="background-image: url(/assets/images/tile-pain05.jpg);">
+							<div class="tiles__details--black">
+								<h5>Denied<br> Veterinary Care</h5>
+								<p>Sick and injured animals are not given veterinary care. Instead they are left to slowly suffer to death on the floors of sheds.</p>
+							</div>
+						</div>
+					
+						<div class="tiles__box half" style="background-image: url(/assets/images/tile-pain06.jpg);">
+							<div class="tiles__details--black">
+								<h5>Painfully Killed</h5>
+								<p>Many animals are killed while still fully conscious. Common killing methods include slitting an animals throat and shooting a metal rod through their brain.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<!-- ==================== -->
+				<!--    BY THE NUMBERS    -->
+				<!-- ==================== -->
+				<section class="interstitial section--large interstitial--stats">
+					<div class="container text-center">
+						<h3 class="mb30">By the Numbers</h3>
+							<div class="span3 wow fadeInDown">
+								<div class="stat__border">
+									<span class="icon icon--knife"></span>
+								</div>
+								
+								<span class="stat text-blue">
+									8.5
+									<span class="stat__sub">BILLION</span>
+								</span>
+								<p>Number of farmed animals killed for food each year in the United States</p>					
+							</div>
+							<div class="span3 wow fadeInDown">
+								<div class="stat__border">
+									<span class="icon icon--meat"></span>
+								</div>
+								<span class="stat text-blue">
+									200
+									<span class="stat__sub">MILLION</span>
+								</span>
+								<p>Number of male chicks killed for food each year in the United States</p>				
+							</div>
+							<div class="span3 wow fadeInDown">
+								<div class="stat__border">
+									<span class="icon icon--chicken"></span>
+								</div>
+								<span class="stat text-blue">
+									24
+									<span class="stat__sub">LIVES</span>
+								</span>
+								<p>Number of animals a vegetarian saves every year</p>				
+							</div>
+							<div class="span3 wow fadeInDown">
+								<div class="stat__border">
+									<span class="icon icon--cow"></span>
+								</div>
+								<span class="stat text-blue">
+									0
+									<span class="stat__sub">LAWS</span>
+								</span>
+								<p>Number of federal laws protecting animals on factory farms</p>				
+							</div>
+						</div>
+				</section>
+				<hr class="divide--large divide--light">
+
+				<!-- ==================== -->
+				<!--   BEHIND THE STATS   -->
+				<!-- ==================== -->
+				<section class="interstitial section--medium">
+					<div class="container text-center">
+						<h3 class="mb10">Behind the Stats</h3>
+						<h5 class="mb40 text-gray">Each animal raised and killed for food has a story. Here are three such stories.</h5>
+						<hr class="divide--small divide--dark">
+						<div id="tabs-container-2" class="tabs-container tabs-container--stories">
+							<ul class="tabs__menu--stories text-center">
+								<li class="current">
+									<a href="#tab-1" class="circle" style="background-image:url(/assets/images/circle-stat01.jpg);"></a>
+								</li>
+								<li>
+									<a href="#tab-2" class="circle" style="background-image:url(/assets/images/circle-stat02.jpg);"></a>
+								</li>
+								<li>
+									<a href="#tab-3" class="circle" style="background-image:url(/assets/images/circle-stat03.jpg);"></a>
+								</li>
+							</ul>
+							<div class="tab--stories">
+								<div id="tab-1" class="tab__content--stories">
+									<div class="flexslider--circle">
+									  <ul class="slides">
+									    <li class="slide">
+									    	<div class="slide__photo" style="background-image:url(/assets/images/circle-stat01_slide01.jpg);"></div>
+									    </li>
+									    <li class="slide">
+									    	<div class="slide__photo" style="background-image: url(http://placehold.it/350x350);"></div>
+									    </li>
+									    <li class="slide">
+									    	<div class="slide__photo" style="background-image: url(http://placehold.it/350x350);"></div>
+									    </li>
+									  </ul>
+									</div>
+
+									<div class="descrip">
+										<div class="inner">
+											<p class="size-30 weight-100 text-blue">Meet Jessica</p>
+											<p class="weight-100">Imagine spending your entire life constantly pregnant and locked in a cage so small you can’t even turn around. It’s the only life that Jessica has ever known.</p>
+											<a class="link" href="">Read more...</a>
+
+											<ul class="tab__footer menu--social">
+												<li><a href="#" class="btn btn--social"><i class="fa fa-facebook"></i></a></li>
+												<li><a href="#" class="btn btn--social"><i class="fa fa-twitter"></i></a></li>
+												<li><a href="#" class="btn btn--social"><i class="fa fa-instagram"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div id="tab-2" class="tab__content--stories">
+									<div class="flexslider--circle">
+									  <ul class="slides">
+									    <li class="slide">
+									    	<div class="slide__photo" style="background-image:url(/assets/images/circle-stat01_slide01.jpg);"></div>
+									    </li>
+									    <li class="slide">
+									    	<div class="slide__photo" style="background-image: url(http://placehold.it/350x350);"></div>
+									    </li>
+									    <li class="slide">
+									    	<div class="slide__photo" style="background-image: url(http://placehold.it/350x350);"></div>
+									    </li>
+									  </ul>
+									</div>
+
+									<div class="descrip">
+										<div class="inner">
+											<p class="size-30 weight-100 text-blue">Tab 2</p>
+											<p class="weight-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur vel purus id dignissim. </p>							
+											<a class="link" href="">Read more...</a>
+
+											<ul class="tab__footer menu--social">
+												<li><a href="#" class="btn btn--social"><i class="fa fa-facebook"></i></a></li>
+												<li><a href="#" class="btn btn--social"><i class="fa fa-twitter"></i></a></li>
+												<li><a href="#" class="btn btn--social"><i class="fa fa-instagram"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div id="tab-3" class="tab__content--stories">
+									<div class="flexslider--circle">
+									  <ul class="slides">
+									    <li class="slide">
+									    	<div class="slide__photo" style="background-image:url(/assets/images/circle-stat01_slide01.jpg);"></div>
+									    </li>
+									    <li class="slide">
+									    	<div class="slide__photo" style="background-image: url(http://placehold.it/350x350);"></div>
+									    </li>
+									    <li class="slide">
+									    	<div class="slide__photo" style="background-image: url(http://placehold.it/350x350);"></div>
+									    </li>
+									  </ul>
+									</div>
+									<div class="descrip">
+										<div class="inner">
+											<p class="size-30 weight-100 text-blue">Tab 3</p>
+										<p class="weight-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur vel purus id dignissim. </p>
+										<a class="link" href="">Read more...</a>
+
+										<ul class="tab__footer menu--social">
+											<li><a href="#" class="btn btn--social"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#" class="btn btn--social"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#" class="btn btn--social"><i class="fa fa-instagram"></i></a></li>
+										</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- #tabs-container-2.tabs-stories -->
+					</div>
+				</section>
+
+				<!-- ==================== -->
+				<!--    4 CTA / DONATE    -->
+				<!-- ==================== -->
+				<section id="tabs-container" class="tabs-container--cta">
+				  <div class="container--full">
+				  	<div class="tab">
+				  	<ul class="tabs__menu cta cta--blue">
+				  	  <li class="span3 current wow fadeIn first">
+				  	    <a class="cta__block" href="#donate" style="background-image:url(/assets/images/cta-smallblue01.jpg);">
+				  	    	<div class="circle circle--small"><i class="fa fa-dollar"></i></div>
+				  	    	<h5>Donate!</h5>
+				  	    </a>
+				  	  </li>
+				  	  <div id="donate" class="tab__content text-white" style="background-image: url(/assets/images/cta-slide01.jpg);">
+								<div id="form--donation">
+									<div class="container text-center">
+										<h1 class="mb0">Help Save Her</h1>
+										<h5 class="mb30">You can save an animal's life today!</h5>
+										<div class="form--donation__container">
+											<form method="get" id="" action="" class="form--donation__form">
+												<input type="hidden" id="" name="" value="">
+												<div class="span12 mb20">
+													<fieldset class="input-amount">
+														<label class="gfield_label" for="input_2_1"><i class="fa fa-dollar"></i></label>
+														<label class="usd gfield_label" for="input_2_1">USD</label>
+														<input name="amount" id="donationAmount" type="number" class="ginput_amount" tabindex="6" placeholder="45" value="45" min="1">
+													</fieldset>
+												</div>
+								        <div class="clearfix"></div>
+								        <div class="span12">
+								        	<button class="btn btn--primary btn--submit" tabindex="12" type="submit">Monthly</button>
+								          <button class="btn btn--primary btn--submit right" tabindex="12" type="submit">Once</button>
+								        </div>
+								       </form>
+										</div>
+									</div>
+								</div>
+							</div>
+					    <li class="span3 wow fadeIn">
+					    	<a class="cta__block" href="#meat-free" style="background-image:url(/assets/images/cta-smallblue02.jpg);">
+					    		<div class="circle circle--small"><i class="icon-help icon--salad"></i></div>
+					    		<h5>Eat With Compassion</h5>
+					    	</a>
+					    </li>
+					    <div id="meat-free" class="tab__content text-white" style="background: url(/assets/images/cta-slide02.jpg);">
+					    	<div class="container text-center">
+					    		<h1>Pledge To Go Vegetarian</h1>
+					    		<h5>You can save 10 animals' lives annually by altering your diet!</h5>
+										<form method="" id="" action="" class="form--signup">
+										  <div class="fieldset name fieldset--withicon">
+										  	<input name="user_name" id="" type="text" class="ginput_amount" tabindex="1" placeholder="Name" onchange="this.className=(this.value=='')?'':'visited';">
+										  	<label class="gfield_label" for="input_1_1"><i class="fa fa-user"></i></label>
+										  </div>
+
+											<div class="fieldset email fieldset--withicon">
+												<input name="user_email" id="" type="text" class="" tabindex="2" placeholder="Email Address" onchange="this.className=(this.value=='')?'':'visited';">
+												<label class="gfield_label" for="input_1_2"><i class="fa fa-envelope-o"></i></label>
+											</div>
+
+											<div class="fieldset zipcode fieldset--withicon">
+												<input name="user_zipcode" id="" type="text" class="" tabindex="3" placeholder="Zip Code" onchange="this.className=(this.value=='')?'':'visited';">
+												<label class="gfield_label" for="input_1_3"><i class="fa fa-home"></i></label>
+											</div>
+
+											<div class="span12 mt10">
+											  <input class="btn btn--primary" type="submit" tabindex="4" value="Sign the Pledge">
+											</div>
+							      </form>
+					    	</div>
+					    </div>
+					    <li class="span3 wow fadeIn">
+					    	<a class="cta__block" href="#join" style="background-image:url(/assets/images/cta-smallblue03.jpg);">
+					    		<div class="circle circle--small"><i class="icon-help icon--user"></i></div>
+					    		<h5>Join the Team</h5>
+					    	</a>
+					    </li>
+					    <div id="join" class="tab__content text-white" style="background: url(/assets/images/cta-slide01.jpg);">
+					    	<div class="container text-center">
+					    		<h1>Join the Team</h1>
+					    		<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+					    	</div>
+					    </div>
+					    <li class="span3 wow fadeIn last">
+					    	<a class="cta__block" href="#involved" style="background-image:url(/assets/images/cta-smallblue04.jpg);">
+					    		<div class="circle circle--small"><i class="fa fa-plus"></i></div>
+					    		<h5>Get Involved</h5>
+					    	</a>
+					    </li>
+					    <div id="involved" class="tab__content text-white" style="background: url(/assets/images/cta-slide02.jpg);">
+					    	<div class="container text-center">
+					    		<h1>Get Involved</h1>
+					    		<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+					    	</div>
+					    </div>
+				  	</ul>
+				  	</div>
+				  </div>
+				</section>
+
+			</div> <!-- #main -->
+			
+			<!-- ==================== -->
+			<!--        FOOTER        -->
+			<!-- ==================== -->
+			<footer class="footer--social">
+				<div class="container-full">
+					<a class="logo logo-color" href="/"></a>
+					<ul class="menu--social">
+						<li><a href="https://www.facebook.com/mercyforanimals" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/MercyForAnimals" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="http://mercyforanimals.tumblr.com/" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+						<li><a href="https://www.youtube.com/user/mercyforanimals" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+						<li><a href="http://instagram.com/mercyforanimals" class="btn btn--social btn--blue" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</footer>
+
+			<footer class="footer--contact">
+				<div class="container text-center">
+					<p><a href="http://www.google.com/maps/place/8033+Sunset+Blvd+%23864,+Los+Angeles,+CA+90046/@34.0981741,-118.3646913,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2bec1ed06229d:0x801744e2608e7077" target="_blank">8033 SUNSET BLVD, SUITE 864 <br class="mobile-only"><span>|</span> LOS ANGELES, CA 90046</a> <span>|</span> <a href="">866-632-6446</a> <span>|</span> <a href="">CONTACT US</a></p>
+				</div>
+			</footer>
+
+			</div>
+		</div><!-- #inject-wrap -->
+
+	<!-- 
+		**************************** 
+		          MODAL BAY
+		****************************
+		-->
+		<div id="modals">
+			<!-- LIKE US ON FACEBOOK -->
+			<div id="fb-like" class="modal modal--small">
+			  <i class="modal-close fa fa-times"></i>
+			  <div class="modal-content">
+			  	<iframe name="f65b07774" width="100" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FQjK2hWv6uak.js%3Fversion%3D41%23cb%3Df10d7ce5c8%26domain%3Dmfa.dev%26origin%3Dhttp%253A%252F%252Fmfa.dev%252Ff3d40ec2d4%26relation%3Dparent.parent&amp;color_scheme=light&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fmercyforanimals&amp;locale=en_US&amp;sdk=joey&amp;show_border=false&amp;show_faces=true&amp;stream=false" style="border: none; visibility: visible; width: 275px; height: 221px;" class=""></iframe>		
+			  </div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<!-- Javascript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="assets/js/vendor/jquery.flexslider.min.js"></script>
+<script src="assets/js/vendor/slick.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/vendor/wow.min.js"></script>
+<script src="assets/js/vendor/skrollr.min.js"></script>
+<script src="assets/js/vendor/jquery.isotope.js"></script>
+<script src="assets/js/vendor/jquery.isotope.packery.js"></script>
+<script src="assets/js/app.js"></script>
