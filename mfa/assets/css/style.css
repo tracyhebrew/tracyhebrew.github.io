@@ -6983,7 +6983,9 @@ body.is_tablet #team #close-expander {
   height: 40px;
   position: absolute;
   top: 50%;
-  margin-top: -20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: 1;
 }
 .investigation .flex-direction-nav a {

@@ -43,11 +43,11 @@
 <!-- Javascript -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="assets/js/vendor/jquery.flexslider.min.js"></script>
-<script src="assets/js/vendor/slick.min.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/vendor/wow.min.js"></script>
-<script src="assets/js/vendor/skrollr.min.js"></script>
-<script src="assets/js/vendor/jquery.isotope.js"></script>
-<script src="assets/js/vendor/jquery.isotope.packery.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="http://tracyhebrew.github.io/assets/js/vendor/jquery.flexslider.min.js"></script>
+<script src="http://tracyhebrew.github.io/assets/js/vendor/slick.min.js"></script>
+<script src="http://tracyhebrew.github.io/assets/js/plugins.js"></script>
+<script src="http://tracyhebrew.github.io/assets/js/vendor/wow.min.js"></script>
+<script src="http://tracyhebrew.github.io/assets/js/vendor/skrollr.min.js"></script>
+<script src="http://tracyhebrew.github.io/assets/js/vendor/jquery.isotope.js"></script>
+<script src="http://tracyhebrew.github.io/assets/js/vendor/jquery.isotope.packery.js"></script>
+<script src="http://tracyhebrew.github.io/assets/js/app.js"></script>

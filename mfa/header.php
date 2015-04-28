@@ -6,23 +6,23 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Title</title>
+	<title>Mercy For Animals</title>
 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="assets/css/style.css?v=2">
+	<link rel="stylesheet" href="http://tracyhebrew.github.io/mfa/assets/css/style.css?v=2">
 
 	<!-- Favicons -->
-	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-	<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="114x114">
-	<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="72x72">
-	<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="http://tracyhebrew.github.io/mfa/assets/images/favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="http://tracyhebrew.github.io/mfa/assets/images/apple-touch-icon.png" sizes="114x114">
+	<link rel="apple-touch-icon" href="http://tracyhebrew.github.io/mfa/assets/images/apple-touch-icon.png" sizes="72x72">
+	<link rel="apple-touch-icon" href="http://tracyhebrew.github.io/mfa/assets/images/apple-touch-icon.png">
 
 	<!-- JS Hooks -->
 	<script> var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false ); </script>
 
-	<script type="text/javascript" src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+	<script type="text/javascript" src="http://tracyhebrew.github.io/mfa/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 	<!--[if lt IE 10]> <script type="text/javascript" src="assets/js/xbc.js"></script> <![endif]-->
 	
 	<script>
@@ -43,10 +43,10 @@
 		
 	<section id="header" class="cart--stick">
 		<div class="header-left brand span6">
-			<a href="/" class="logo logo-white"></a>
+			<a href="http://tracyhebrew.github.io/mfa/" class="logo logo-white"></a>
 		</div>
 		<div class="header-right text-right">
-			<a href="/donate.html" class="btn btn-donate active--none"><i class="fa fa-heart-o"></i>Donate</a>
+			<a href="http://tracyhebrew.github.io/mfa/donate.html" class="btn btn-donate active--none"><i class="fa fa-heart-o"></i>Donate</a>
       <a id="nav-toggle" class="btn btn-toggle active--none">
         <div class="nav-toggle-icon">
           <div class="nav-toggle-icon__lines"></div>
@@ -60,26 +60,26 @@
 		<div class="nav__body">
 			<div class="nav__inner">
 				<ul id="menu-main" class="menu-main">
-					<li id="menu-item-1" class="menu-item"><a href="/">Home</a></li>
+					<li id="menu-item-1" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/index.html">Home</a></li>
 					
 					<li id="menu-item-2" class="menu-item menu-item-has-children">
-						<a href="/about.html">About MFA</a>
+						<a href="http://tracyhebrew.github.io/mfa/about.html">About MFA</a>
 						
 						<ul class="sub-menu">
-							<li id="menu-item-2_1" class="menu-item"><a href="/about.html#team">The Team</a></li>
-							<li id="menu-item-2_2" class="menu-item"><a href="/about.html#success">Our Success</a></li>
-							<li id="menu-item-2_3" class="menu-item"><a href="/about.html#jobs">Jobs</a></li>
+							<li id="menu-item-2_1" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/about.html#team">The Team</a></li>
+							<li id="menu-item-2_2" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/about.html#success">Our Success</a></li>
+							<li id="menu-item-2_3" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/about.html#jobs">Jobs</a></li>
 							<li id="menu-item-2_4" class="menu-item"><a href="">Contact Us</a></li>
 						</ul>
 					</li>
 					
-					<li id="menu-item-3" class="menu-item"><a href="/the-problem.html">The Problem</a></li>
+					<li id="menu-item-3" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/the-problem.html">The Problem</a></li>
 					
 					<li id="menu-item-4" class="menu-item menu-item-has-children">
 						<a href="">What We Do</a>
 						
 						<ul class="sub-menu">
-							<li id="menu-item-4_1" class="menu-item"><a href="/investigations.html">Undercover Investigations</a></li>
+							<li id="menu-item-4_1" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/investigations.html">Undercover Investigations</a></li>
 							<li id="menu-item-4_2" class="menu-item"><a href="">Corporate Outreach</a></li>
 							<li id="menu-item-4_3" class="menu-item"><a href="">Legal Advocacy</a></li>
 							<li id="menu-item-4_4" class="menu-item"><a href="">Education</a></li>
@@ -90,16 +90,16 @@
 						<a href="/get-involved.html">Get Involved</a>
 						
 						<ul class="sub-menu">
-							<li id="menu-item-5_1" class="menu-item"><a href="/get-involved.html#actioncenter">Action Center</a></li>
+							<li id="menu-item-5_1" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/get-involved.html#actioncenter">Action Center</a></li>
 						</ul>
 					</li>
 					
 				</ul>
 				
 				<ul id="menu-secondary" class="menu-secondary">
-					<li id="menu-item-6" class="menu-item"><a href="/shop.html">Shop</a></li>
-					<li id="menu-item-7" class="menu-item"><a href="/blog.html">Blog</a></li>
-					<li id="menu-item-8" class="menu-item"><a href="/donate.html">Donate</a></li>
+					<li id="menu-item-6" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/shop.html">Shop</a></li>
+					<li id="menu-item-7" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/blog.html">Blog</a></li>
+					<li id="menu-item-8" class="menu-item"><a href="http://tracyhebrew.github.io/mfa/donate.html">Donate</a></li>
 				</ul>
 			</div>
 
@@ -121,7 +121,7 @@
 			</div>
 			
 			<div class="cart__item">
-				<div class="span2 item-thumbnail" style="background-image:url(/assets/images/merch/merch01.jpg);"></div>
+				<div class="span2 item-thumbnail" style="background-image:url(http://tracyhebrew.github.io/mfa/assets/images/merch/merch01.jpg);"></div>
 				<div class="span10 item-desc">
 					<p class="item-name">Don't Eat My Peeps</p>
 					<p class="item-size">Small</p>
